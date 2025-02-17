@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .app {
+    text-align: center;
+  }
+  
+  .gradient-button {
+    position: relative;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background: #09041D;
+    border-radius: 17px;
+    background-clip: padding-box;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .gradient-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 13px;
+    padding: 3px;
+    background: linear-gradient(90deg, #00B7FF, #FFFFFF);
+    -webkit-mask: 
+      linear-gradient(#09041D 0 0) content-box,
+      linear-gradient(#09041D 0 0);
+    mask: 
+      linear-gradient(#09041D 0 0) content-box,
+      linear-gradient(#09041D 0 0);
+    mask-composite: exclude;
+  }
+  
+  .gradient-button:hover::before {
+    background: linear-gradient(90deg, #FFFFFF, #00B7FF);
+  }
+  
+  .gradient-button:hover,
+  .gradient-button:focus {
+    box-shadow:-20px -8px 30px -20px #00B7FF,-20px -8px 30px -20px #00B7FF, -15px -20px 20px -30px #FFFFFF, -15px -20px 20px -30px #FFFFFF, -15px -20px 20px -30px #FFFFFF;  
+  
+    transform: translateY(-0.2em);
+  }
