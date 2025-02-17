@@ -33,3 +33,28 @@ function App() {
 }
 
 export default App
+
+
+// import React from "react";
+// import Button from "./component/Button";
+// import OurServiceCard from "./component/OurServiceCard";
+// import Grid from "./component/Grid";
+// import Footer from "./Pages/Footer";
+// import Sec from "./Pages/Sec/Sec";
+// import "./App.css"
+// const App = () => {
+//   return (
+   
+//       <div>
+//     <Grid/>
+//        <Button />
+//         <OurServiceCard /> 
+//         <Sec/>
+//        <Footer /> 
+//       </div>
+      
+//   );
+// };
+
+// export default App;
+
