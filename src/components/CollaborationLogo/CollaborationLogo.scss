@@ -1,0 +1,26 @@
+
+
+.collaborationLogo {
+    max-width: max-content;
+
+    img {
+        filter: saturate(0) brightness(.75);
+        transition: filter .3s ease;
+    }
+
+    div.name {
+        text-shadow: none;
+        transition: text-shadow .3s ease;
+    }
+
+    &:hover {
+        img {
+            filter: none;
+        }
+
+        div.name {
+            color: white;
+            text-shadow: 0 0 10px rgb(255, 247, 0, .7), 0 0 10px rgb(255, 247, 0, .7), 0 0 30px rgba(255, 0, 0, .5);
+        }
+    }
+}
