@@ -1,0 +1,19 @@
+
+
+.teckasLogo {
+    position: relative;
+    margin-bottom: 5rem;
+
+
+    &.blur::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: radial-gradient(circle at 50% 50%, rgba(0, 183, 255, .35), transparent);
+        filter: blur(50px);
+    }
+}
