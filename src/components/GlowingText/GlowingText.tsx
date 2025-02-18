@@ -4,7 +4,11 @@ import { FC, useEffect, useState } from "react";
 
 import "./GlowingText.scss";
 
-const GlowingText: FC = () => {
+type GlowingTextProps = {
+    text: string[]
+}
+
+const GlowingText: FC<GlowingTextProps> = ({ text }) => {
 
     const [x, setX] = useState<string>("50%");
     const [y, setY] = useState<string>("50%");
@@ -32,11 +36,11 @@ const GlowingText: FC = () => {
     return (
         <>
             <div className="glowingTextContainer">
-                <span className="glowingText">{"Plan"}</span>
-                <span className="glowingText">{"Design"}</span>
-                <span className="glowingText">{"Develop"}</span>
-                <span className="glowingText">{"Support"}</span>
-                <span className="glowingText">{"Grow"}</span>
+                {
+                    text.map((word, index) => {
+                        return <span key={index} className="glowingText">{word}</span>
+                    })
+                }
 
             <div className="light" style={{
                         "--x": x,

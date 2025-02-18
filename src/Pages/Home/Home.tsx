@@ -9,7 +9,15 @@ const Home: React.FC = () => {
         <div className="Home">
             Home Page
             <TeckasLogo showBackgroundBlur />
-            <GlowingText />
+            <GlowingText text={[
+                "Plan",
+                "Design",
+                "Develop",
+                "Support",
+                "Grow"
+            ]} />
+
+
         </div>
     );
 }
