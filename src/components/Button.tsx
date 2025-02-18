@@ -1,10 +1,14 @@
 import React from "react";
 import "./Button.css";
 
-const Button: React.FC = () => {
+type ButtonProps = {
+  text?: string
+}
+
+const Button: React.FC<ButtonProps> = (props) => {
   return (
     <div className="app">
-      <button className="gradient-button">Success needs your wish</button>
+      <button className="gradient-button">{props.text ?? "Success needs your wish"}</button>
     </div>
   );
 };
