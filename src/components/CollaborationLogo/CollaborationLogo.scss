@@ -2,25 +2,44 @@
 
 .collaborationLogo {
     max-width: max-content;
+    width: 100px;
+    min-height: 100px;
+    padding: 1rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    transition: all .3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
 
     img {
+        height: 80%;
+        width: 80%;
+        object-fit: contain;
         filter: saturate(0) brightness(.75);
         transition: filter .3s ease;
     }
 
     div.name {
+        text-align: center;
+        border: 1px solid transparent;
         text-shadow: none;
         transition: text-shadow .3s ease;
     }
 
     &:hover {
+        background: linear-gradient( 120deg, rgba(white, .02), rgba(white, .04));
+        border-color: rgba(0, 183, 255, .3);
+
         img {
             filter: none;
         }
 
         div.name {
             color: white;
-            text-shadow: 0 0 10px rgb(255, 247, 0, .7), 0 0 10px rgb(255, 247, 0, .7), 0 0 30px rgba(255, 0, 0, .5);
+            text-shadow: 0 0 10px rgb(255, 247, 0, .3), 0 0 10px rgb(255, 247, 0, .3), 0 0 30px rgba(255, 0, 0, .3);
         }
     }
 }
