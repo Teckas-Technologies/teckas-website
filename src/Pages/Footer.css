@@ -3,7 +3,7 @@
   background-color: #000;
   color: #fff;
   font-family: 'Inter', sans-serif;
-  padding: 30px 20px; /* Reduced padding */
+  padding: 50px 100px; /* Reduced padding */
   flex-shrink: 0; /* Prevent footer from shrinking */
   border: none; /* Remove any unintended borders */
 }
