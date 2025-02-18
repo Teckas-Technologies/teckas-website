@@ -3,7 +3,7 @@ import "./Footer.css";
 import { FaLinkedin, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import Logo from "../img/Logo/logo.png";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-container">

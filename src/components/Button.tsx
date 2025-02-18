@@ -1,14 +1,12 @@
-
 import React from "react";
 import "./Button.css";
 
-const Button = () => {
+const Button: React.FC = () => {
   return (
     <div className="app">
-      <button className="gradient-button">Succes needs ur wish</button>
+      <button className="gradient-button">Success needs your wish</button>
     </div>
   );
 };
 
 export default Button;
-
