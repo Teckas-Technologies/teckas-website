@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Sec.css";
 import logo1 from "../../img/Logo/logo1.png";
-import Button from "../../component/Button";
+import Button from "../../components/Button";
 import Call from "../../img/Call.png";
 import Mess from "../../img/Mess.png";
 import World from "../../img/World.png";
@@ -9,7 +9,7 @@ import port from "../../img/port.png";
 import Man1 from "../../img/Man1.png";
 import Man2 from "../../img/Man2.png";
 import Man3 from "../../img/Man3.png";
-import NavBar from "../../component/NavBar/NavBar"
+import NavBar from "../../components/NavBar/NavBar"
 
 const Sec = () => {
   const [menuOpen, setMenuOpen] = useState(false);
