@@ -9,13 +9,14 @@ import port from "../../img/port.png";
 import Man1 from "../../img/Man1.png";
 import Man2 from "../../img/Man2.png";
 import Man3 from "../../img/Man3.png";
+import NavBar from "../../component/NavBar/NavBar"
 
 const Sec = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="container">
-      <header className="header">
+      {/* <header className="header">
         <img src={logo1} alt="Teckas Technologies Logo" className="logo" />
 
         <div className="header-icons">
@@ -26,20 +27,21 @@ const Sec = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
+        {/* <div className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
           &#9776;
         </div>
-      </header>
+      </header> */}
 
       {/* Mobile Dropdown Menu with Smooth Slide Animation */}
-      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+      {/* <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <ul>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#projects">Our Projects</a></li>
         </ul>
-      </div>
+      </div> */} 
+      <NavBar/>
 
       <main className="content">
         <h1 className="headline">We help Startups bring<br></br>their Ideas to Life</h1>
