@@ -7,8 +7,7 @@ import Home from "./Pages/Home/Home";
 import Button from "./components/Button";
 import OurServiceCard from "./components/OurServiceCard";
 import Grid from "./components/Grid";
-import Footer from "./Pages/Footer";
-// import Sec from "./Pages/Sec/Sec";
+// import Footer from "./Pages/Footer/Footer";
 
 const App: React.FC = () => {
   return (
@@ -16,7 +15,7 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/*" element={<Footer />} />
+        {/* <Route path="/*" element={<Footer />} /> */}
       </Routes>
     </Router>
 
