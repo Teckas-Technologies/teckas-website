@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Sec.scss";
-import logo1 from "../../img/Logo/logo.png";
 import Button from "../../components/Button";
 // import Call from "../../img/Call.png";
 // import Mess from "../../img/Mess.png";
@@ -12,7 +11,7 @@ import Button from "../../components/Button";
 import NavBar from "../../components/NavBar/NavBar"
 
 const Sec: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  // const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="container">

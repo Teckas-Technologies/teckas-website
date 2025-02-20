@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import './App.css'
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 import Home from "./Pages/Home/Home";
-import Button from "./components/Button";
-import OurServiceCard from "./components/OurServiceCard";
-import Grid from "./components/Grid";
 // import Footer from "./Pages/Footer/Footer";
 
 const App: React.FC = () => {

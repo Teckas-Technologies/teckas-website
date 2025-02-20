@@ -1,6 +1,5 @@
 import React from "react";
 import "./OurServiceCard.css";
-import BCImage from '../img/OurServices/BC.png';
 
 interface CardProps {
   title?: string;

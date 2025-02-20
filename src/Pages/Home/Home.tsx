@@ -2,7 +2,6 @@ import "./Home.scss";
 import React from "react";
 
 import GlowingText from "../../components/GlowingText/GlowingText";
-import TeckasLogo from "../../components/TeckasLogo/TeckasLogo";
 import CollaborationLogo from "../../components/CollaborationLogo/CollaborationLogo";
 import FeaturedWorkCard from "../../components/FeaturedWorkCard/FeaturedWorkCard";
 
