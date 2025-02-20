@@ -8,15 +8,15 @@ import FeaturedWorkCard from "../../components/FeaturedWorkCard/FeaturedWorkCard
 
 import Sec from "../Sec/Sec";
 import CollaborationSection from "../CollaborationSection/CollaborationSection";
-import Video from "../Video/Vid.js";
+// import Video from "../Video/Vid.js";
 
 const Home: React.FC = () => {
     return (
         <div className="Home">
             <Sec />
             <CollaborationSection />
-            <Video/>
-            {/* <TeckasLogo showBackgroundBlur /> */}
+{/*             <Video/>
+            {/* <TeckasLogo showBackgroundBlur /> */} */}
             {/* <GlowingText text={[
                 "Plan",
                 "Design",
