@@ -15,7 +15,9 @@ const Home: React.FC = () => {
         <div className="Home">
             <Sec />
             <CollaborationSection />
-{/*             <Video/>
+{/*        <div style={{ display: "flex", justifyContent: "center", padding: "20px" }}>
+                <Video/>
+            </div>
             {/* <TeckasLogo showBackgroundBlur /> */} */}
             {/* <GlowingText text={[
                 "Plan",
