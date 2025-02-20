@@ -11,6 +11,7 @@ import CollaborationSection from "../CollaborationSection/CollaborationSection";
 import FeaturedWorkSection from "../FeaturedWorkSection/FeaturedWorkSection";
 
 import TeckasLogo from "../..//assets/teckas-logo.png";
+// import Video from "../Video/Vid.js";
 
 const Home: React.FC = () => {
     return (
