@@ -3,8 +3,18 @@
 .Home {
     width: 100%;
     box-sizing: border-box;
+    opacity: 0;
+
+    animation: fadeIn 1.5s ease-in-out forwards;
     // display: flex;
     // flex-direction: column;
     // align-items: center;
     // justify-content: center;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }

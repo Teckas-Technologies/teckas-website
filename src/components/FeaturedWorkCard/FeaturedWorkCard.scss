@@ -1,0 +1,99 @@
+
+
+.featuredWorkCard {
+    max-width: max-content;
+    scale: .9;
+
+    .box {
+        background: rgba(white, .1);
+        border-radius: 1.5rem;
+        position: relative;
+        padding: 1.5rem;
+        height: 300px;
+        width: 300px;
+
+        .logoContainer {
+            z-index: 2;
+            position: absolute;
+            left: calc(2rem + .3rem);
+            top: calc(2rem + .3rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .25rem;
+            background: linear-gradient(60deg, rgba(white, .08), rgba(white, .1));
+            box-shadow: 0 -1.2px 1px rgba(white, .7);
+            max-width: max-content;
+            border-radius: 1rem;
+            padding: .15rem .5rem;
+
+            img {
+                height: 20px;
+                object-fit: contain;
+            }
+
+            .name {
+                font-size: .75rem;
+            }
+        }
+
+        .imageContainer {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: black;
+            border-radius: 1rem;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                transition: all .4s ease;
+            }
+
+            img {
+                width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                flex: 1;
+                flex-shrink: 0;
+            }
+
+            .text {
+                position: absolute;
+                bottom: -50%;
+                left: 0;
+                width: 100%;
+                color: white;
+                padding: 10px;
+                text-align: center;
+                transition: bottom 0.4s ease-in-out;
+            }
+        }
+
+        &:hover {
+            
+            .imageContainer::before {
+                background: rgba(black, .85);
+                backdrop-filter: blur(2px);
+            }
+
+            .text {
+                bottom: 0;
+            }
+        }
+    }
+
+    .buttonContainer {
+        scale: .8;
+        margin-top: 1rem;
+    }
+}

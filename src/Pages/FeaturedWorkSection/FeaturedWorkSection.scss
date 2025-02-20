@@ -1,0 +1,54 @@
+
+
+
+.FeaturedWorkSection {
+    padding: 5rem 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        // background-image: url("../../assets/collaborations/background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 75%, transparent 100%);
+    }
+
+    .title {
+      margin: 0 auto;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+    
+    .subtitle {
+        opacity: .8;
+      font-size: 1rem;
+      margin: .5rem 0;
+      line-height: 25px;
+      font-weight: lighter;
+      text-align: center;
+    }
+
+    .featuredWorkContainer {
+        margin: 2rem auto;
+        width: min(1200px, 95%);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: .25rem;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .buttonContainer {
+        max-width: max-content;
+        margin: 0 auto;
+    }
+}
