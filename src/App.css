@@ -1,0 +1,14 @@
+
+.gradientText {
+    max-width: max-content;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    background-color: #A3E5FF;
+    background-image: linear-gradient(to left, #A3E5FF, #00B7FF);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}

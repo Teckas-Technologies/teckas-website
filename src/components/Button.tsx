@@ -8,7 +8,7 @@ type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = (props) => {
   return (
-    <div className="app">
+    <div className="buttonContainer">
       <button className={"gradient-button " + props.className}>{props.text ?? "Success needs your wish"}</button>
     </div>
   );

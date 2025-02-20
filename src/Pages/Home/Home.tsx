@@ -7,20 +7,14 @@ import CollaborationLogo from "../../components/CollaborationLogo/CollaborationL
 import FeaturedWorkCard from "../../components/FeaturedWorkCard/FeaturedWorkCard";
 
 import Sec from "../Sec/Sec";
-
-// collaboration logos
-import gfxvs from "../../assets/collaborations/gfxvs.png";
-import mintbase from "../../assets/collaborations/mintbase.png";
-import bitte from "../../assets/collaborations/bitte.png";
-import near from "../../assets/collaborations/near.png";
-import aurora from "../../assets/collaborations/aurora.png";
-import sin from "../../assets/collaborations/sin.png";
+import CollaborationSection from "../CollaborationSection/CollaborationSection";
 
 
 const Home: React.FC = () => {
     return (
         <div className="Home">
             <Sec />
+            <CollaborationSection />
             {/* <TeckasLogo showBackgroundBlur /> */}
             {/* <GlowingText text={[
                 "Plan",
