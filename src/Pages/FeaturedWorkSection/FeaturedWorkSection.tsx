@@ -1,7 +1,5 @@
 import React from 'react';
 
-import CollaborationLogo from '../../components/CollaborationLogo/CollaborationLogo';
-import Button from "../../components/Button"
 import FeaturedWorkCard from "../../components/FeaturedWorkCard/FeaturedWorkCard";
 
 import "./FeaturedWorkSection.scss";

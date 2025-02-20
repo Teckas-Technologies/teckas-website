@@ -3,9 +3,6 @@
 import { FC } from "react";
 import Button from "../Button";
 
-import gfxvslogo from "../../assets/collaborations/gfxvs.png";
-import gfxvsWork from "../../assets/featured-work/gfxvs.png";
-
 import "./FeaturedWorkCard.scss";
 
 type FeaturedWorkCardType = {

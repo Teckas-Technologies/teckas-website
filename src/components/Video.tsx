@@ -14,7 +14,7 @@ interface TestimonialCardProps {
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
   image,
-  logo,
+  // logo,
   name,
   position,
   feedback,
@@ -43,7 +43,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           src={pause} // Replace with your pause icon path
           alt="Play Button"
           className="play-button"
-          onClick={() => window.open(driveLink, "_blank")} // Redirect to Google Drive link
+          onClick={() => window.open(drivelink, "_blank")} // Redirect to Google Drive link
         />         
 
       </div>
