@@ -2,6 +2,7 @@ import "./Home.scss";
 import React from "react";
 
 import GlowingText from "../../components/GlowingText/GlowingText";
+// import TeckasLogo from "../../components/TeckasLogo/TeckasLogo";
 import CollaborationLogo from "../../components/CollaborationLogo/CollaborationLogo";
 import FeaturedWorkCard from "../../components/FeaturedWorkCard/FeaturedWorkCard";
 
@@ -21,15 +22,15 @@ const Home: React.FC = () => {
         <div className="Home">
             <Sec />
             {/* <TeckasLogo showBackgroundBlur /> */}
-            <GlowingText text={[
+            {/* <GlowingText text={[
                 "Plan",
                 "Design",
                 "Develop",
                 "Support",
                 "Grow"
-            ]} />
+            ]} /> */}
 
-            <div style={{
+            {/* <div style={{
                 display: "flex",
                 flexDirection: "column",
                 marginTop: ".5rem",
@@ -59,12 +60,12 @@ const Home: React.FC = () => {
                     logo={sin}
                     name={"SIN"}
                 />
-            </div>
+            </div> */}
 
-            <FeaturedWorkCard 
+            {/* <FeaturedWorkCard 
                 imageURL={gfxvs}
                 name="GFXvs"
-            />
+            /> */}
 
 
         </div>

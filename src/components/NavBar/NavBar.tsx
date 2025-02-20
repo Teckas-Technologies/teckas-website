@@ -41,20 +41,22 @@ const Header: React.FC = () => {
 
       {/* Mobile Dropdown Menu with Smooth Slide Animation */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <ul>
-          <li>
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-          <li>
-            <a href="#projects">Our Projects</a>
-          </li>
-        </ul>
+        <div className="mobile-menu-container">
+          <ul>
+            <li>
+              <a href="#portfolio">PORTFOLIO</a>
+            </li>
+            <li>
+              <a href="#about">SERVICES</a>
+            </li>
+            <li>
+              <a href="#contact">TESTIMONIALS</a>
+            </li>
+            <li>
+              <a href="#projects">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );

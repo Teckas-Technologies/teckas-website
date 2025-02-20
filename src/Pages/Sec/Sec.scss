@@ -1,16 +1,22 @@
-
 .container {
-  padding-top: 4rem;
+  padding-top: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  // width: calc(100vw - 2rem) !important;
+  // border: 1px solid cyan;
   background: url('../../assets/section1bg.png') center/cover no-repeat;
   margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  box-sizing: border-box;
 }
 
 .content {
+  box-sizing: border-box;
   text-align: center;
   color: white;
   width: 100%;
@@ -39,7 +45,7 @@
   letter-spacing: -2.5px;
 }
 
-.subheadline {
+.subheadline, .bottom-label, .bottom-label {
   font-size: 1.2rem;
   margin: 20px 0;
   line-height: 25px;
@@ -59,9 +65,8 @@
   align-items: center;
   gap: 1rem;
   max-width: max-content;
-  padding: .75rem 2rem;
+  padding: .25rem 3rem;
   margin: 1rem auto;
-  margin-bottom: 50px;
   background-color: rgba(60, 91, 100, 0.25);
   color: rgba(white, .9);
   border-radius: 75px;
@@ -91,8 +96,8 @@
   justify-content: left;
   gap: -15px;
 
-  
-  .client-img {    
+
+  .client-img {
     height: 35px;
     width: 35px;
     object-fit: cover;
@@ -127,7 +132,7 @@
     font-size: 400%;
   }
 
-  .subheadline {
+  .subheadline, .bottom-label, .bottom-label {
     font-size: 90%;
   }
 
@@ -137,13 +142,9 @@
 }
 
 @media (max-width: 914px) {
-  .header {
-    width: 95%;
-  }
 
   .bottom {
     width: 60%;
-    height: 8%;
     flex-direction: row;
     align-items: center;
   }
@@ -162,7 +163,7 @@
     font-size: 390%;
   }
 
-  .subheadline {
+  .subheadline, .bottom-label {
     font-size: 90%;
   }
 }
@@ -176,7 +177,7 @@
     display: none;
   }
 
-  .subheadline {
+  .subheadline, .bottom-label {
     font-size: 0.7rem;
     line-height: 20px;
   }
@@ -208,7 +209,7 @@
     line-height: 1.2;
   }
 
-  .subheadline {
+  .subheadline, .bottom-label {
     font-size: 0.8rem;
     line-height: 18px;
   }
@@ -245,7 +246,7 @@
     font-size: 280%;
   }
 
-  .subheadline {
+  .subheadline, .bottom-label {
     font-size: 0.5rem;
   }
 }
@@ -256,7 +257,7 @@
     line-height: 1;
   }
 
-  .subheadline {
+  .subheadline, .bottom-label {
     font-size: 0.5rem;
     line-height: 16px;
   }
@@ -282,7 +283,7 @@
     line-height: 1;
   }
 
-  .subheadline {
+  .subheadline, .bottom-label {
     font-size: 0.5rem;
     line-height: 16px;
   }
@@ -374,12 +375,10 @@
 }
 
 @media (max-width: 800px) {
- .header .header-icons {
+  .header .header-icons {
     display: none;
   }
-.container .header{
-  width: 95%;
-}
+
   .container .menu-button {
     display: block;
   }

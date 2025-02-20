@@ -15,31 +15,7 @@ const Sec: React.FC = () => {
 
   return (
     <div className="container">
-      {/* <header className="header">
-        <img src={logo1} alt="Teckas Technologies Logo" className="logo" />
 
-        <div className="header-icons">
-          <img src={port} alt="Portfolio Icon" className="portfolio-btn" />
-          <img src={World} alt="World Icon" className="icon" />
-          <img src={Mess} alt="Mess Icon" className="icon" />
-          <img src={Call} alt="Call Icon" className="icon" />
-        </div>
-
-        {/* Mobile Menu Button */}
-        {/* <div className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
-          &#9776;
-        </div>
-      </header> */}
-
-      {/* Mobile Dropdown Menu with Smooth Slide Animation */}
-      {/* <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <ul>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#projects">Our Projects</a></li>
-        </ul>
-      </div> */} 
       <NavBar/>
 
       <main className="content">
@@ -53,15 +29,15 @@ const Sec: React.FC = () => {
         <Button className="chat-button" text="Got an Idea? Let's Chat!" />
 
         <div className="bottom">
-        <div className="clients">
-          <img src={""} alt="Client 1" className="client-img" />
-          <img src={""} alt="Client 2" className="client-img overlap" />
-          <img src={""} alt="Client 3" className="client-img overlap" />
+          <div className="clients">
+            <img src={""} alt="Client 1" className="client-img" />
+            <img src={""} alt="Client 2" className="client-img overlap" />
+            <img src={""} alt="Client 3" className="client-img overlap" />
+          </div>
+          <div className="bottom-label">
+            Trusted by 15 amazing clients and counting. Read Testimonials
+          </div>
         </div>
-        <div className="bottom-label">
-          Trusted by 15 amazing clients and counting. Read Testimonials
-        </div>
-      </div>
       </main>
     </div>
   );
