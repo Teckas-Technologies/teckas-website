@@ -19,7 +19,7 @@
         height: 80%;
         width: 80%;
         object-fit: contain;
-        filter: saturate(0) brightness(.75);
+        filter: sepia(500%) hue-rotate(170deg) saturate(50) brightness(.5);
         transition: filter .3s ease;
         opacity: .4;
 
