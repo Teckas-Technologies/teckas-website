@@ -23,7 +23,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   return (
     <div className="testimonial-card">
       <div className="video-section">
-        <img src={image} alt="Testimonial" className="video-image" />
+        <div className="video-image-container">
+          <img src={image} alt="Testimonial" className="video-image" />
+        </div>
        <div className="details">
        <h4 className="name">{name}</h4>
        <p className="position">{position}</p>

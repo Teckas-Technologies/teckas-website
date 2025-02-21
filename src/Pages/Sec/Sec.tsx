@@ -1,6 +1,12 @@
 import React from "react";
 import "./Sec.scss";
 import Button from "../../components/Button";
+import logo from "../../assets/react.svg"
+
+import client1 from "../../assets/clients/1.png"
+import client2 from "../../assets/clients/2.png"
+import client3 from "../../assets/clients/3.png"
+
 // import Call from "../../img/Call.png";
 // import Mess from "../../img/Mess.png";
 // import World from "../../img/World.png";
@@ -30,9 +36,9 @@ const Sec: React.FC = () => {
 
         <div className="bottom">
           <div className="clients">
-            <img src={""} alt="Client 1" className="client-img" />
-            <img src={""} alt="Client 2" className="client-img overlap" />
-            <img src={""} alt="Client 3" className="client-img overlap" />
+            <img src={client1} alt="Client 1" className="client-img" />
+            <img src={client2} alt="Client 2" className="client-img overlap" />
+            <img src={client3} alt="Client 3" className="client-img overlap" />
           </div>
           <div className="bottom-label">
             Trusted by 15 amazing clients and counting. Read Testimonials
