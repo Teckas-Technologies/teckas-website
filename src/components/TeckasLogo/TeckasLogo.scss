@@ -2,7 +2,6 @@
 
 .teckasLogo {
     position: relative;
-    margin-bottom: 5rem;
 
     &.blur::before {
         content: '';
@@ -14,5 +13,11 @@
         z-index: -1;
         background: radial-gradient(circle at 50% 50%, rgba(0, 183, 255, .35), transparent);
         filter: blur(50px);
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
     }
 }

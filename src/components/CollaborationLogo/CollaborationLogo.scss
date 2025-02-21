@@ -20,8 +20,8 @@
         width: 80%;
         object-fit: contain;
         filter: sepia(500%) hue-rotate(170deg) saturate(50) brightness(.5);
-        transition: filter .3s ease;
-        opacity: .4;
+        opacity: .3;
+        transition: all .2s ease;
 
         &::before {
             content: '';

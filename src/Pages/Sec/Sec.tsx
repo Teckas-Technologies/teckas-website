@@ -1,7 +1,6 @@
 import React from "react";
 import "./Sec.scss";
 import Button from "../../components/Button";
-import logo from "../../assets/react.svg"
 
 import client1 from "../../assets/clients/1.png"
 import client2 from "../../assets/clients/2.png"

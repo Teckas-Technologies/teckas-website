@@ -5,10 +5,11 @@ import { FC, useEffect, useState } from "react";
 import "./GlowingText.scss";
 
 type GlowingTextProps = {
-    text: string[]
+    text: string[],
+    onHover?: (index: number) => void
 }
 
-const GlowingText: FC<GlowingTextProps> = ({ text }) => {
+const GlowingText: FC<GlowingTextProps> = ({ text, onHover }) => {
 
     const [x, setX] = useState<string>("50%");
     const [y, setY] = useState<string>("50%");
@@ -38,7 +39,19 @@ const GlowingText: FC<GlowingTextProps> = ({ text }) => {
             <div className="glowingTextContainer">
                 {
                     text.map((word, index) => {
-                        return <span key={index} className="glowingText">{word}</span>
+                        return (
+                            <span 
+                                key={index} 
+                                className="glowingText"
+                                onMouseEnter={() => {
+                                    if (onHover) {
+                                        onHover(index);
+                                    }
+                                }}
+                            >
+                                {word}
+                            </span>
+                        );
                     })
                 }
 
