@@ -7,6 +7,8 @@ import FeaturedWorkSection from "../FeaturedWorkSection/FeaturedWorkSection";
 import VideoSection from "../Video/VideoSection";
 import PlanDesignDevelopSection from "../PlanDesignDevelopSection/PlanDesignDevelopSection"; 
 
+import Footer from "../Footer/Footer";
+
 const Home: React.FC = () => {
     return (
         <div className="Home">
@@ -15,6 +17,8 @@ const Home: React.FC = () => {
             <FeaturedWorkSection />
             <VideoSection />
             <PlanDesignDevelopSection />
+
+            <Footer />
             
             {/* <TeckasLogo showBackgroundBlur /> */}
 
