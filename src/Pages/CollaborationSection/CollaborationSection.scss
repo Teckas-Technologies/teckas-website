@@ -21,6 +21,10 @@
         -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 75%, transparent 100%);
     }
 
+    .hideInMobile {
+        display: block;
+    }
+
     .title {
       margin: 0 auto;
       text-align: center;
@@ -35,6 +39,8 @@
       line-height: 25px;
       font-weight: lighter;
       text-align: center;
+      width: min(800px, 90%);
+        margin: 0 auto;
     }
 
     .logosContainer {
@@ -50,5 +56,23 @@
     .buttonContainer {
         max-width: max-content;
         margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .CollaborationSection .logosContainer {
+        width: 60%;
+    }
+
+    .CollaborationSection {
+        .title {
+            line-height: 3rem;
+            font-weight: 600;
+        }
+    }
+
+    .hideInMobile {
+        display: none !important;
     }
 }

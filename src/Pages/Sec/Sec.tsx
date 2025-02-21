@@ -13,15 +13,12 @@ import client3 from "../../assets/clients/3.png"
 // import Man1 from "../../img/Man1.png";
 // import Man2 from "../../img/Man2.png";
 // import Man3 from "../../img/Man3.png";
-import NavBar from "../../components/NavBar/NavBar"
 
 const Sec: React.FC = () => {
   // const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="container">
-
-      <NavBar/>
 
       <main className="content">
         <h1 className="headline">We help Startups bring</h1>

@@ -1,5 +1,5 @@
 .container {
-  padding-top: 6rem;
+  padding-top: 8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -499,16 +499,12 @@
     height: 40px;
   }
   .bottom{
-    width: 70%;
+    width: 80%;
   }
 
   .clients {
     justify-content: center;
     gap: 5px;
-  }
-
-  .bottom {
-    width: 70%;
   }
 
   .client-img {

@@ -34,12 +34,12 @@ const CollaborationSection: React.FC = () => {
             </div>
 
             <div className="logosContainer">
-                <CollaborationLogo logo={gfxvs} name='GFXvs' />
-                <CollaborationLogo logo={mintbase} name='Mintbase' />
+                <CollaborationLogo className='hideInMobile' logo={gfxvs} name='GFXvs' />
+                <CollaborationLogo className='hideInMobile' logo={mintbase} name='Mintbase' />
                 <CollaborationLogo logo={bitte} name='Bitte' />
                 <CollaborationLogo logo={near} name='NEAR' />
-                <CollaborationLogo logo={aurora} name='Aurora' />
-                <CollaborationLogo logo={sin} name='SIN' />
+                <CollaborationLogo className='hideInMobile' logo={aurora} name='Aurora' />
+                <CollaborationLogo className='hideInMobile' logo={sin} name='SIN' />
             </div>
 
             <Button text='Have a Project in mind?' />

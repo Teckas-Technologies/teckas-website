@@ -9,10 +9,13 @@ import PlanDesignDevelopSection from "../PlanDesignDevelopSection/PlanDesignDeve
 import CtaSection from "../CtaSection/CtaSection";
 
 import Footer from "../Footer/Footer";
+import NavBar from "../../components/NavBar/NavBar"
 
 const Home: React.FC = () => {
     return (
         <div className="Home">
+            <NavBar />
+
             <Sec />
             <CollaborationSection />
             <FeaturedWorkSection />
