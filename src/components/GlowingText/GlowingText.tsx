@@ -27,6 +27,7 @@ const GlowingText: FC<GlowingTextProps> = ({ text, onHover }) => {
             }    }
 
         window.addEventListener("mousemove", handleMouseMove);
+        handleMouseMove({ clientX: window.innerWidth / 2, clientY: window.innerHeight / 2 } as unknown as MouseEvent);
 
         return () => {
             window.removeEventListener("mousemove", handleMouseMove);
