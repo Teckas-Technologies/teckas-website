@@ -99,7 +99,19 @@
   margin-top: 40px;
   text-align: center;
 }
+@media (max-width:713px)  {
+  .footer{
+    scale: .8;
+    justify-content: center;
 
+  }
+}
+@media (max-width:400px)  {
+  .footer{
+    scale: .6;
+    justify-content: center;
+  }
+}
 .footer-copyright {
   font-size: 14px;
   color: #ccc;
