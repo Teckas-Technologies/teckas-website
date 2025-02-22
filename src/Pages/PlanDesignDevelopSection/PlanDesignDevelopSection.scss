@@ -2,7 +2,7 @@
 
 
 .PlanDesignDevelopSection {
-    padding: 5rem 2rem;
+    padding: 0rem 2rem;
     position: relative;
     display: flex;
     width: 100%;
@@ -37,6 +37,8 @@
         padding: 2rem;
         flex: 1;
         min-width: 0;
+        
+        background-color: rgba(8, 7, 7, 0.656);
     }
 
     .detailedInfo {
@@ -49,7 +51,7 @@
 
         .content {
             // border: 2px solid yellow;
-            width: 75%;
+            width: 80%;
             
             .title {
                 margin: 0 auto;
@@ -66,16 +68,23 @@
                 .text {
                     max-width: 100%;
                     flex: 1 0 100%;
-                    font-weight: 600;
-                    font-size: 3.5rem;
+                    font-size: 2rem;
                     line-height: 3rem;
+                    margin-bottom: 5rem;
+
                     letter-spacing: -.075rem;
                     opacity: 0;
 
-                    transition: all .65s ease;
+                    transition: all 1s ease;
 
                     &.active {
                         opacity: 1;
+                        font-size: 2rem;
+                        margin-bottom: 5rem;
+                        line-height: 3rem;
+
+                        justify-content: center;
+                        align-items: center;
                     }
 
                     @for $i from 1 through 5 {
@@ -145,14 +154,22 @@
     .PlanDesignDevelopSection .detailedInfo .content .workflowExplanation .text {
         font-size: 1.5rem;
         line-height: 1.75rem;
+        transition: all 0s ease;
+
+        
+
+
     }
     .PlanDesignDevelopSection .glowingTextContainer {
         padding: 0;
         
         .glowingText {
-            font-size: 2.5rem !important;
-            line-height: 3rem;
+            font-size: 4.5rem !important;
+            line-height: 5rem;
         }
+    }
+    .workflowExplanation {
+        scale: .8;
     }
 }
 
@@ -165,8 +182,11 @@
         .content {
             .title {
                 margin-bottom: 1rem !important;
-                width: 30% !important;
+                width: 50% !important;
             }
+        }
+        .workflowExplanation {
+            scale: .7;
         }
     }
 
@@ -177,35 +197,147 @@
     .PlanDesignDevelopSection .glowingTextContainer {
         padding: 0; 
         .glowingText {
-            font-size: 2.5rem !important;
-            line-height: 2.5rem;
+            font-size: 3.5rem !important;
+            line-height: 4.5rem;
+        }
+    }
+}
+
+@media (max-width: 658px) {
+    
+
+ 
+    
+
+    .PlanDesignDevelopSection .detailedInfo .content .workflowExplanation .text {
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+    .PlanDesignDevelopSection .glowingTextContainer {
+        .glowingText {
+            font-size: 3.5rem !important;
+            line-height: 4.5rem;
         }
     }
 }
 
 @media (max-width: 576px) {
+
+    .PlanDesignDevelopSection{
+        
+        .content {
+            .title {
+                width: 50% !important;
+            }
+        }
+        .workflowExplanation {
+            scale: .6;
+           margin: 0;
+           .text{
+            font-size: small;
+           }
+        }
+    }
     .PlanDesignDevelopSection .detailedInfo {
         flex: 1 !important;
     
         .content {
-
-            .title {
-                display: none;
-            }
-        
-            .text {
-                font-size: 1rem;
-                line-height: 1.25rem;
-            }
+        .workflowExplanation {
+            scale: .5;
+            width: 280%;
+            margin-left: -80%;
+           .text{
+            font-size: 1rem;
+           }
+        }
         }
     }
 
-    .PlanDesignDevelopSection .glowingTextContainer {
-        padding: 0 !important;
 
+    .PlanDesignDevelopSection .glowingTextContainer {
+        padding: 0;
+        
         .glowingText {
             font-size: 2rem !important;
-            line-height: 2.5rem;
+            line-height: 3rem;
+        }
+    }
+}
+
+@media (max-width: 476px) {
+
+    .PlanDesignDevelopSection{
+        
+        .content {
+            .title {
+                width: 80% !important;
+            }
+        }
+        .workflowExplanation {
+            scale: .6;
+           margin: 0;
+           .text{
+            font-size: small;
+           }
+        }
+    }
+    .PlanDesignDevelopSection .detailedInfo {
+        flex: 1 !important;
+    
+        .content {
+        .workflowExplanation {
+            scale: .45;
+            width: 300%;
+            margin-left: -80%;
+           .text{
+            font-size: 1rem;
+           }
+        }
+        }
+    }
+
+
+    .PlanDesignDevelopSection .glowingTextContainer {
+        padding: 0;
+        
+        .glowingText {
+            font-size: 2rem !important;
+            line-height: 3rem;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .PlanDesignDevelopSection{
+        .content {
+            .title {
+                width: 150% !important;
+            }
+        }
+    }
+    .PlanDesignDevelopSection .detailedInfo {
+        flex: 1 !important;
+       
+    
+        .content {
+        .workflowExplanation {
+            scale: .35;
+            width: 300%;
+            margin-left: -80%;
+           .text{
+            font-size: 1rem;
+           }
+        }
+        }
+    }
+
+
+    .PlanDesignDevelopSection .glowingTextContainer {
+        padding: 0;
+        
+        .glowingText {
+            font-size: 2.5rem !important;
+            line-height: 3rem;
         }
     }
 }
