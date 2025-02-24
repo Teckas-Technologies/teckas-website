@@ -2,7 +2,7 @@
 
 
 .PlanDesignDevelopSection {
-    padding: 0rem 2rem;
+    padding: 0rem 4rem;
     position: relative;
     display: flex;
     width: 100%;
@@ -44,7 +44,7 @@
     .detailedInfo {
         min-width: 0;
         // border: 2px solid red;
-        flex: 1 !important;
+        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -55,7 +55,7 @@
             
             .title {
                 margin: 0 auto;
-                margin-bottom: 2rem;
+                // margin-bottom: 2rem;
                 width: 35%;
             }  
 
@@ -70,7 +70,7 @@
                     flex: 1 0 100%;
                     font-size: 2rem;
                     line-height: 3rem;
-                    margin-bottom: 5rem;
+                    // margin-bottom: 5rem;
 
                     letter-spacing: -.075rem;
                     opacity: 0;
@@ -80,7 +80,7 @@
                     &.active {
                         opacity: 1;
                         font-size: 2rem;
-                        margin-bottom: 5rem;
+                        // margin-bottom: 5rem;
                         line-height: 3rem;
 
                         justify-content: center;
@@ -151,15 +151,31 @@
 // }
 
 @media (max-width: 992px) {
-    .PlanDesignDevelopSection .detailedInfo .content .workflowExplanation .text {
+
+    .PlanDesignDevelopSection {
+        padding: 0;
+        padding-left: 1rem;
+    }
+
+    .PlanDesignDevelopSection .detailedInfo {
+        padding: 0;
+        flex: 1.2;
+
+        .content {
+            padding: 0;
+
+            .text {
+                max-width: 100%;
+            }
+        }
+    
+        .content .workflowExplanation .text {
         font-size: 1.5rem;
         line-height: 1.75rem;
         transition: all 0s ease;
-
-        
-
-
+        }
     }
+
     .PlanDesignDevelopSection .glowingTextContainer {
         padding: 0;
         
@@ -176,17 +192,15 @@
 @media (max-width: 768px) {
 
     .PlanDesignDevelopSection {
-        padding-left: 2rem;
-        padding-right: 2rem;
 
         .content {
             .title {
-                margin-bottom: 1rem !important;
-                width: 50% !important;
+                // margin-bottom: 1rem !important;
+                // width: 50% !important;
             }
         }
         .workflowExplanation {
-            scale: .7;
+            // scale: .7;
         }
     }
 
@@ -227,7 +241,8 @@
         
         .content {
             .title {
-                width: 50% !important;
+                // width: 50% !important;
+                display: none;
             }
         }
         .workflowExplanation {
@@ -244,7 +259,7 @@
         .content {
         .workflowExplanation {
             scale: .5;
-            width: 280%;
+            width: 260%;
             margin-left: -80%;
            .text{
             font-size: 1rem;
@@ -270,7 +285,8 @@
         
         .content {
             .title {
-                width: 80% !important;
+                // width: 80% !important;
+                display: none;
             }
         }
         .workflowExplanation {
@@ -287,8 +303,9 @@
         .content {
         .workflowExplanation {
             scale: .45;
-            width: 300%;
+            // width: 300%;
             margin-left: -80%;
+            
            .text{
             font-size: 1rem;
            }
