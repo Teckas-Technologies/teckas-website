@@ -5,21 +5,21 @@ import "./FlowingLineSection.scss";
 
 import FlowingLine from "../../components/FlowingLineSection/FlowingLine";
 import TeckasLogo from "../../components/TeckasLogo/TeckasLogo";
-import OurServiceCard from "../../components/OurServiceCard";
+// import OurServiceCard from "../../components/OurServiceCard";
 
-import react from "../../assets/our-services/react.png";
-import next from "../../assets/our-services/next.png";
-import js from "../../assets/our-services/js.png";
+// import react from "../../assets/our-services/react.png";
+// import next from "../../assets/our-services/next.png";
+// import js from "../../assets/our-services/js.png";
 
-import py from "../../assets/our-services/py.png";
-import gpt from "../../assets/our-services/gpt.png";
-import ollama from "../../assets/our-services/ollama.png";
+// import py from "../../assets/our-services/py.png";
+// import gpt from "../../assets/our-services/gpt.png";
+// import ollama from "../../assets/our-services/ollama.png";
 
-import eth from "../../assets/our-services/eth.png";
-import polka from "../../assets/our-services/polka.png";
-import near from "../../assets/our-services/near.png";
-import sol from "../../assets/our-services/sol.png";
-import rust from "../../assets/our-services/rust.png";
+// import eth from "../../assets/our-services/eth.png";
+// import polka from "../../assets/our-services/polka.png";
+// import near from "../../assets/our-services/near.png";
+// import sol from "../../assets/our-services/sol.png";
+// import rust from "../../assets/our-services/rust.png";
 
 
 const FlowingLineSection: React.FC = () => {
