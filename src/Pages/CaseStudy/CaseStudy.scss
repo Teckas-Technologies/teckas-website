@@ -1,0 +1,290 @@
+// Variables
+$primary-color: #00aaff;
+$text-color: #fffdfd;
+$secondary-text-color: #ddddddab;
+$font-family: 'Inter', sans-serif;
+
+// Base Styles
+.Full {
+  width: 100%;
+  margin-left: -51.9%;
+  position: absolute;
+  padding: 0%;
+}
+
+.design-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 4%;
+  padding-top: 5%;
+  margin-bottom: 5%;
+  font-family: $font-family;
+  color: $text-color;
+
+  .left-section {
+    flex: 1;
+    max-width: 100%;
+
+    .category {
+      font-size: 2rem;
+      color: $text-color;
+      border-bottom: 2px solid #ddd;
+      width: 60%;
+
+      .dot {
+        margin: 0 5px;
+        color: $primary-color;
+      }
+    }
+
+    .title {
+      font-size: 500%;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+
+    .description {
+      font-size: 120%;
+      color: $secondary-text-color;
+      margin-top: 10px;
+    }
+  }
+
+  .right-section {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .task {
+      padding-top: 8%;
+      border-radius: 8px;
+
+      .two {
+        display: flex;
+        margin-top: 1rem;
+      }
+
+      h3 {
+        font-size: 150%;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 16px;
+        color: $secondary-text-color;
+        margin: 20px 0;
+      }
+
+      .strategy,
+      .technique {
+        margin-top: 20px;
+        padding-right: 10%;
+
+        h3 {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.down {
+
+  .p {
+    display: flex;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: $text-color;
+    font-size: 150%;
+    font-weight: 600;
+    font-family: $font-family;
+
+    .sym {
+      scale: 0.9;
+    }
+  }
+
+  .page {
+    padding: 9%;
+    padding-bottom: 2%;
+    width: 100%;
+  }
+}
+
+// Mobile Responsive
+@media (max-width: 1000px) {
+  .design-container {
+    scale: 0.95;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 5%;
+
+    .left-section,
+    .right-section {
+      max-width: 80%;
+    }
+
+    .title {
+      font-size: 400%;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .design-container {
+    flex-direction: column;
+
+    .left-section,
+    .right-section {
+      max-width: 100%;
+    }
+
+    .left-section {
+      .description {
+        font-size: 1rem;
+      }
+    }
+
+    .right-section {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .design-container {
+    flex-direction: column;
+
+    .left-section,
+    .right-section {
+      max-width: 100%;
+    }
+
+    .right-section {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .design-container {
+    margin: 10% 5%;
+
+    .left-section {
+      .title {
+        font-size: 350%;
+      }
+
+      .category {
+        font-size: 1.8rem;
+      }
+    }
+
+    .right-section {
+      padding-top: 5%;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .design-container {
+    .left-section,
+    .right-section {
+      max-width: 90%;
+    }
+
+    .left-section {
+      .title {
+        font-size: 300%;
+      }
+
+      .category {
+        font-size: 1.6rem;
+      }
+
+      .description {
+        font-size: medium;
+      }
+    }
+
+    .task {
+      padding-top: 5%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .design-container {
+    margin: 5% 3%;
+
+    .left-section {
+      .title {
+        font-size: 250%;
+      }
+
+      .description {
+        font-size: 0.8rem;
+        line-height: 1rem;
+      }
+
+      .category {
+        font-size: 1.2rem;
+        width: 80%;
+      }
+    }
+
+    .task {
+      padding: 0;
+
+      h3 {
+        font-size: 120%;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .design-container {
+    margin: 5% 3%;
+
+    .left-section {
+      .title {
+        font-size: 200%;
+      }
+
+      .description {
+        font-size: 0.6rem;
+        line-height: 1rem;
+      }
+
+      .category {
+        font-size: 1rem;
+        width: 80%;
+      }
+    }
+
+    .task {
+      padding: 0;
+
+      h3 {
+        font-size: 120%;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
