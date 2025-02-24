@@ -16,6 +16,7 @@ type BottomPaginationType = {
 
 const BottomPagination: React.FC<BottomPaginationType> = (props) => {
 
+    // @ts-ignore
     const [maxPageButtons, setMaxPageButtons] = React.useState(5);
 
     return (
@@ -24,7 +25,7 @@ const BottomPagination: React.FC<BottomPaginationType> = (props) => {
                     {
                         // length is less than maxPageButtons pages. only show maxPageButtons buttons (or less)
                         (Math.ceil(props.items.length / props.itemsPerPage) < maxPageButtons) ? (
-                            new Array(Math.ceil(props.items.length / props.itemsPerPage)).fill(0).map((val, index) => <button key={index} className={(((props.startIndex / props.itemsPerPage)) == index) ? "number active" : "number"} onClick={() => props.goToPage(index)}>{index + 1}</button>)
+                            new Array(Math.ceil(props.items.length / props.itemsPerPage)).fill(0).map((_, index) => <button key={index} className={(((props.startIndex / props.itemsPerPage)) == index) ? "number active" : "number"} onClick={() => props.goToPage(index)}>{index + 1}</button>)
                         ) : (
                             // length is more than maxPageButtons. show maxPageButtons buttons and add ... in the middle and < > buttons
                             <>

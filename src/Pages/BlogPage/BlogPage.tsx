@@ -310,11 +310,12 @@ const items: BlogCardType[] = [
 
 const BlogPage: React.FC = () => {
 
-
+    // @ts-ignore
     const [itemsPerPage, setItemsPerPage] = useState(9);
     const [startIndex, setStartIndex] = useState(0);
     const [stopIndex, setStopIndex] = useState(itemsPerPage);
 
+    // @ts-ignore
     const [cards, setCards] = useState(items);
     const [filteredCards, setFilteredCards] = useState([] as BlogCardType[]);
 
