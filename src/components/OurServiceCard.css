@@ -11,6 +11,11 @@
     font-family: 'Inter', sans-serif;
     z-index: 1;
     overflow: hidden;
+    min-height: 230px;
+
+    display: flex;
+    flex-direction: column;
+
   }
   
   .card::before {
@@ -48,6 +53,7 @@
     text-align: center;
     z-index: 1;
     overflow: hidden;
+    max-width: max-content;
   }
   
   .card-header::before {
@@ -73,7 +79,7 @@
   
   
   .card-text {
-    font-size: 14px;
+    font-size: .7rem;
     margin-bottom: 20px;
     line-height: 1.5;
   }
@@ -82,7 +88,7 @@
     display: flex;
     justify-content: left;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: auto;
   }
   
   .icon {

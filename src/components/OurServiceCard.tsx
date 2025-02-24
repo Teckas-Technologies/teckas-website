@@ -4,7 +4,7 @@ import "./OurServiceCard.css";
 interface CardProps {
   title?: string;
   text?: string;
-  imageSrc?: string;
+  imageSrc?: string[];
 }
 
 const Card: React.FC<CardProps> = ({ title, text, imageSrc }) => {
@@ -13,7 +13,16 @@ const Card: React.FC<CardProps> = ({ title, text, imageSrc }) => {
       <div className="card-header">{title || "Title"}</div>
       <p className="card-text">{text || "Some text"}</p>
       <div className="card-icons">
-        <img src={imageSrc || undefined} alt="Card Image" className="icon" />
+        {
+          (imageSrc || []).map((src, index) => (
+            <img
+              key={index} 
+              src={src}
+              alt="Card Image" 
+              className="icon" 
+            />
+          ))
+        }
       </div>
     </div>
   );

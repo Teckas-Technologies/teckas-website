@@ -4,6 +4,7 @@ import React from "react";
 import Sec from "../Sec/Sec";
 import CollaborationSection from "../CollaborationSection/CollaborationSection";
 import FeaturedWorkSection from "../FeaturedWorkSection/FeaturedWorkSection";
+import FlowingLineSection from "../../Pages/FlowingLineSection/FlowingLineSection";
 import VideoSection from "../Video/VideoSection";
 import PlanDesignDevelopSection from "../PlanDesignDevelopSection/PlanDesignDevelopSection"; 
 import CtaSection from "../CtaSection/CtaSection";
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
             <Sec />
             <CollaborationSection />
             <FeaturedWorkSection />
+            <FlowingLineSection />
             <VideoSection />
             <PlanDesignDevelopSection />
             <CtaSection />
