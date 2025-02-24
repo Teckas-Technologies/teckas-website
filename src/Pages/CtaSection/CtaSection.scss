@@ -46,7 +46,7 @@
 }
 
 @media screen and (max-width: 920px) {
-
+   .CtaSection{
     .subtitle {
         font-size: 1rem !important;
     }
@@ -54,5 +54,42 @@
     .title {
         font-size: 3rem !important;
     }
+   }
 
+}
+@media screen and (max-width: 700px) {
+    .CtaSection{
+     .subtitle {
+         font-size: .8rem !important;
+     }
+ 
+     .title {
+         font-size: 2.5rem !important;
+     }
+    }
+ 
+ }
+ @media screen and (max-width: 580px) {
+    .CtaSection{
+     .subtitle {
+         font-size: .7rem !important;
+     }
+ 
+     .title {
+         font-size: 2rem !important;
+     }
+    }
+ 
+ }
+ @media screen and (max-width: 468px) {
+    .CtaSection{
+     .subtitle {
+         font-size: .6rem !important;
+     }
+ 
+     .title {
+         font-size: 1.5rem !important;
+     }
+    }
+ 
 }
