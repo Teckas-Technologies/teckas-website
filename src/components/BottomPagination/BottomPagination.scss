@@ -1,0 +1,80 @@
+
+
+
+.bottomPagination {
+    font-family: "Inter";
+    padding: 3rem 0;
+
+    .pagination {
+        position: relative;
+        margin: 0 auto;
+        background-color: black;
+        // border: 1px solid rgba(white, .4);
+        padding: 1rem;
+        border-radius: 6rem;
+        max-width: max-content;
+
+        display: flex;
+        gap: 1rem;
+
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 101%;
+            height: 106%;
+            border-radius: 65px;
+            padding: .2rem;
+            background: linear-gradient(90deg, rgba(white, .6), rgba(white, .05));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button.leftArrow, button.rightArrow {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            background-color: transparent;
+            border-style: none;
+
+            &:disabled {
+                cursor: not-allowed;
+            }
+
+            svg {
+                margin-bottom: .05rem;
+            }
+        }
+
+        button.number {
+            font-family: "Inter";
+            border-style: none;
+            background-color: transparent;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &.active {
+                background-color: rgba(#00B7FF, .4);
+                border: 1px solid #48CBFF;
+            }
+        }
+
+        .numbers {
+            display: flex;
+            gap: 1rem;
+        }
+
+    }
+}

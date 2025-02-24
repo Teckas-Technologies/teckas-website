@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 import Home from "./Pages/Home/Home";
+import BlogPage from "./Pages/BlogPage/BlogPage";
 // import Footer from "./Pages/Footer/Footer";
 
 const App: React.FC = () => {
@@ -12,6 +13,7 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<BlogPage />} />
         {/* <Route path="/*" element={<Footer />} /> */}
       </Routes>
     </Router>

@@ -1,0 +1,103 @@
+
+
+.BlogPage {
+
+    .header {
+        position: absolute;
+    }
+
+    .blogSection {
+        margin-top: 10rem;
+        padding: 2rem;
+        
+        .headerSection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .left {
+                padding: .5rem;
+
+                h1 {
+                    font-size: 2.5rem;
+                    font-weight: 800;
+                }
+
+                .searchbarContainer {
+                    width: min(400px, 95%);
+                    margin-top: 1rem;
+
+                    input {
+                        background-color: transparent;
+                        width: 100%;
+                        padding: 1rem 1.5rem;
+                        border: 1px solid #ccc;
+                        border-radius: 2rem;
+                    }
+                }
+
+                .subtitle {
+                    font-size: 1rem;
+                    margin-top: 1rem;
+                }
+
+            }
+
+            .right {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .content {
+
+
+            .blogGridContainer {
+                .blogGrid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+                    gap: 2rem;
+                    margin-top: 2rem;
+                }
+            }
+
+        }
+
+    }
+}
+
+
+
+@media screen and (max-width: 660px) {
+    .BlogPage {
+
+        .header {
+            position: fixed;
+        }
+
+        .blogSection {
+            .headerSection {
+                flex-direction: column;
+
+                .right {
+                    display: none;
+                }
+            }
+        }
+        
+        .bottomPagination {
+            
+            .pagination {
+                .leftArrow, .rightArrow {
+                    font-size: .75rem;
+                }
+    
+                .number {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
