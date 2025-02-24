@@ -42,20 +42,20 @@
   height: 25px;
 }
 
-.header-icons {
+.header .header-icons {
   display: flex;
   color: #505050;
   font-weight: 500;
   gap: .5rem;
 }
 
-.header-icons img {
+.header .header-icons img {
   height: 25px;
   width: 25px;
   object-fit: contain;
 }
 
-.header-icons .rectangle {
+.header .header-icons .rectangle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +65,7 @@
   border-radius: 1.4rem;
 }
 
-.header-icons .circle {
+.header .header-icons .circle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,14 +74,14 @@
   background-color: rgba(255, 255, 255, .9);
 }
 
-.icon {
+.header .icon {
   width: 40px;
   height: 40px;
   cursor: pointer;
 }
 
 /* Mobile Menu Button */
-.menu-button {
+.header .menu-button {
   display: none;
   font-size: 2rem;
   color: white;
@@ -92,7 +92,7 @@
 }
 
 /* Mobile Dropdown Menu */
-.mobile-menu {
+.header .mobile-menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -110,13 +110,13 @@
   padding-top: 4rem;
 }
 
-.mobile-menu.open {
+.header .mobile-menu.open {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
 }
 
-.mobile-menu-container {
+.header .mobile-menu-container {
   background-color: rgb(0, 0, 0);
   width: 96%;
   margin: 0 auto;
@@ -126,20 +126,20 @@
   border-radius: 1rem;
 }
 
-.mobile-menu ul {
+.header .mobile-menu ul {
   list-style-type: none;
   margin: 0;
   line-height: 7vh;
 }
 
-.mobile-menu li {
+.header .mobile-menu li {
   margin-bottom: 20px;
   font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.142);
   position: relative;
 }
 
-.mobile-menu li::after {
+.header .mobile-menu li::after {
   content: '';
   position: absolute;
   left: 0;
@@ -149,7 +149,7 @@
   background-color: rgba(255, 255, 255, .8);
 }
 
-.mobile-menu a {
+.header .mobile-menu a {
   text-decoration: none;
   color: white;
   display: inline-block;
@@ -165,14 +165,14 @@
 @media (max-width: 800px) {
 
 
-  .container:has(.mobile-menu.open) .header {
+  .header .container:has(.mobile-menu.open) .header {
     border-radius: 20px 20px 0 0;
     backdrop-filter: none;
     background-color: transparent;
     background-color: black;
   }
 
-  .container:has(.mobile-menu.open) .header::before {
+  .header .container:has(.mobile-menu.open) .header::before {
     border-radius: 20px 20px 0 0;
     padding-bottom: 0;
     background-color: black;
@@ -187,7 +187,7 @@
     display: none;
   }
 
-  .menu-button {
+  .header .menu-button {
     display: block;
   }
 }
