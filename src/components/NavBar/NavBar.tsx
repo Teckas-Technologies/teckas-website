@@ -7,6 +7,7 @@ import message from "../../assets/navbar/nav_message.png";
 import world from "../../assets/navbar/nav_dns.png";
 
 import "./NavBar.css"; // Ensure the CSS file matches your style
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,22 +16,31 @@ const Header: React.FC = () => {
     <>
       {/* Header */}
       <header className="header">
-        <img src={logo1} alt="Teckas Technologies Logo" className="logo" />
+        <Link to={"/"}>
+          <img src={logo1} alt="Teckas Technologies Logo" className="logo" />       
+        </Link>
 
         <div className="header-icons">
           <div className="rectangle portfolio">
             <span>Portfolio</span>
             <img src={portfolio} alt="Portfolio Icon" className="portfolio-btn" />
           </div>
-          <div className="circle dns">
+          <Link to={"/blog"} className="circle dns">
             <img src={world} alt="DNS Services" className="icon" />
-          </div>
-          <div className="circle message">
-            <img src={message} alt="Message" className="icon" />
-          </div>
-          <div className="circle call">
-            <img src={call} alt="Call us" className="icon" />
-          </div>
+          </Link>
+
+          <Link to={"/blog"}>
+            <div className="circle message">
+              <img src={message} alt="Message" className="icon" />
+            </div>
+          </Link>
+          
+          <Link to={"/blog"}>
+            <div className="circle call">
+              <img src={call} alt="Call us" className="icon" />
+            </div>
+          </Link>
+          
         </div>
 
         {/* Mobile Menu Button */}

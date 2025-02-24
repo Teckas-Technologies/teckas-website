@@ -9,6 +9,13 @@ import BottomPagination from '../../components/BottomPagination/BottomPagination
 import Footer from '../Footer/Footer';
 import BlogCard from '../../components/BlogCard/BlogCard';
 
+import blog1 from "../../assets/blogs/blog1.png"
+import blog2 from "../../assets/blogs/blog2.png"
+import blog3 from "../../assets/blogs/blog3.png"
+import blog4 from "../../assets/blogs/blog4.png"
+
+const blogImages = [blog1, blog2, blog3, blog4];
+
 type BlogCardType = {
     title: string;
     date: string;
@@ -376,6 +383,7 @@ const BlogPage: React.FC = () => {
                                         <BlogCard
                                             key={index}
                                             {...card}
+                                            image={ blogImages[Math.ceil(Math.random() * 3)]  }
                                         />
                                     )
                                 })
