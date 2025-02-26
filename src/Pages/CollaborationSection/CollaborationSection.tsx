@@ -22,15 +22,17 @@ const CollaborationSection: React.FC = () => {
                 Teckas Technologies
             </div>
 
-            <div className="title">
-                Trusted by Startups and Blockchain
-            </div>
-            <div className="title">
-                Foundations Worldwide
-            </div>
+            <div className='center'>
+                <div className="title">
+                    Trusted by Startups and Blockchain <br />Foundations Worldwide
+                </div>
+                <div className="title">
+                    
+                </div>
 
-            <div className="subtitle">
-                We're proud to have collaborated with innovative startups and leading blockchain foundations to build impactful products.
+                <div className="subtitle">
+                    We're proud to have collaborated with innovative startups and leading blockchain foundations to build impactful products.
+                </div>
             </div>
 
             <div className="logosContainer">

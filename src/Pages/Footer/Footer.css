@@ -3,9 +3,10 @@
   background-color: #000;
   color: #fff;
   font-family: 'Inter', sans-serif;
-  padding: 50px 100px; /* Reduced padding */
+  padding:10%; /* Reduced padding */
   flex-shrink: 0; /* Prevent footer from shrinking */
-  border: none; /* Remove any unintended borders */
+  border: none; 
+  /* Remove any unintended borders */
 }
 
 .footer * {
@@ -69,7 +70,7 @@
 }
 
 .footer-heading {
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 15px;
   text-align: left;
 }
@@ -83,7 +84,7 @@
 
 .footer-list li {
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 20px;
   color: #ccc;
   line-height: 25px;
   width: 100%;
@@ -99,22 +100,122 @@
   margin-top: 40px;
   text-align: center;
 }
-@media (max-width:713px)  {
-  .footer{
-    padding: 0 1rem;
-    scale: .8;
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+/* Responsive Media Queries */
+
+/* Tablets and small desktops */
+@media (max-width: 768px) {
+  .footer {
+    padding: 5%;
+  }
+
+  .footer-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .footer-social {
     justify-content: center;
+    margin-top: 10px;
+  }
+
+  .footer-content {
+    
+    align-items: center;
+    justify-content: center;
+    
+  }
+}
+
+/* Medium-sized devices (Phablets, small tablets) */
+@media (max-width: 600px) {
+ 
+
+
+
+
+  .footer-heading {
+    font-size: 22px;
+  }
+
+  .footer-list li {
+    font-size: 18px;
+  }
+
+
+}
+@media (max-width: 500px) {
+ 
+
+
+
+
+  .footer-heading {
+    line-height: .8rem;
+
+    font-size: 18px;
+  }
+
+  .footer-list li {
+    line-height: 1.2rem;
+
+    font-size: 15px;
+  }
+  .social-icon {
+    font-size: 27px;
+  }
+
+
+}
+/* Small phones */
+@media (max-width: 400px) {
+  .footer {
+    padding: 7%;
+  }
+
+  .footer-heading {
+    font-size: 17px;
+    line-height: .5rem;
+  }
+
+  .footer-list li {
+    font-size: 14px;
+    line-height: 1rem;
 
   }
-}
-@media (max-width:400px)  {
-  .footer{
-    padding: 0 1rem;
-    scale: .6;
-    justify-content: center;
+
+  .social-icon {
+    font-size: 22px;
   }
 }
-.footer-copyright {
-  font-size: 14px;
-  color: #ccc;
+
+/* Extra small devices */
+@media (max-width: 300px) {
+  .footer {
+    padding: 2%;
+  }
+
+  .footer-heading {
+    font-size: 18px;
+  }
+
+
+
+  .footer-list li {
+    font-size: 14px;
+  }
+
+  .social-icon {
+    font-size: 20px;
+  }
 }
