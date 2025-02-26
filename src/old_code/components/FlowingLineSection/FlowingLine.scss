@@ -1,0 +1,36 @@
+
+
+.FlowingLine {
+    max-width: max-content;
+    max-height: max-content;
+    position: relative;
+
+    transform: rotate(var(--rotation)) rotateY(var(--flip));
+
+    .regular {
+        max-width: max-content;
+    }
+
+    .highlight {
+        position: absolute;
+        top: 0;
+        max-width: max-content;
+        mask-image: linear-gradient(to right, transparent, white, white);
+
+        .mask-rect {
+            animation: slideMask 2s cubic-bezier(0, 0, 0.84, 0.49) infinite;
+        }
+    }
+    
+}
+
+
+@keyframes slideMask {
+    0% {
+        x: -100%;
+    }
+
+    100% {
+        x: 150%;
+    }
+}

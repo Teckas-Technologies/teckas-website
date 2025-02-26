@@ -3,13 +3,32 @@
 .FlowingLineSection {
     width: 100%;
     overflow: hidden;
-    padding: 3rem 0;
+    padding: 5% 0;
     position: relative;
+    .title {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 2.8rem;
+        letter-spacing: -3px;
+        font-weight: 400;
+        line-height: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin: .5rem 0;
+        margin-bottom: 10%;
+        line-height: 25px;
+        font-weight: 1;
+        text-align: center;
+    }
 
     .flowingLineGridContainer {
         position: relative;
         width: 80%;
         margin: 0 auto;
+        scale: .789;
+        margin-bottom: 5%;
 
         .logoContainer {
             width: 30%;
@@ -29,21 +48,103 @@
             overflow: hidden;
         }
 
-        .cardsGrid {
-            position: absolute;
-            top: 0;
-            left: 0;
 
-            // display: grid;
-            // grid-template-columns: repeat(2, 1fr);
+    }
+}
+.cardsGrid {
+    .lt{
+        position: absolute;
+        padding: 5%;
+        top: 27%;
+        padding-left: 7%;
+    }
+    .ld{
+        position: absolute;
+        padding: 5%;
+        padding-left: 7%;
+        bottom: -2%
+    }
+    .rd{
+        position: absolute;
+        padding: 5%;
+        padding-right: 6%;
+        right: 1%;
+        top: 27%;
 
-            .card {
-                scale: .8;
+    }
+    .rt{
+        position: absolute;
+        padding: 5%;
+        padding-right: 6%;
+        right: 1%;
+        bottom: -2%
 
-                position: absolute;
-                top: 0;
-                left: 0;
+    }
+}
+
+@media (max-width: 1230px){
+        .downny{
+            .flowingLineGridContainer{
+                scale: .7;
             }
+        }
+}
+@media (max-width: 1100px){
+    .downny{
+        .flowingLineGridContainer{
+            scale: .6;
         }
     }
 }
+@media (max-width: 950px){
+    .downny{
+        display: flex;
+        .flowingLineGridContainer{
+            display: none;
+        }
+        .cardsGrid{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            
+        }
+    }
+}
+
+  
+    /* Apply Flexbox Layout ONLY for Web Screens */
+    
+      
+        /* Responsive Layout - Switch to Flexbox at 950px */
+@media (max-width: 950px) {
+            .cardsGrid{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+               
+          .lt, .ld, .rt, .rd {
+            position: static;  // Remove absolute positioning
+            flex: 1 1 calc(50% - 2rem); // Two per row, with spacing
+            max-width: 500px;
+            padding: 2rem 2rem;
+            display: flex;
+            justify-content: center;
+          }
+        }
+        }
+      
+        /* Further adjustments for smaller screens */
+@media (max-width: 600px) {
+        .cardsGrid{
+          align-items: center;
+          
+          .lt, .ld, .rt, .rd {
+            flex: 1 1 100%; // Stack items vertically
+            max-width: 100%;
+          }
+        }
+    }
+
+      
+  

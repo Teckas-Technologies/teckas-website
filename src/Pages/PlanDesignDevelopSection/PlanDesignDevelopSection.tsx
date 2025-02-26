@@ -19,11 +19,13 @@ const PlanDesignDevelopSection: React.FC = () => {
 
     return (
         <div className='PlanDesignDevelopSection'>
+            <div className='glw'>
             <GlowingText text={[
                 ...Object.keys(workflows)
             ]} 
                 onHover={(index) => setActiveWorkflow(index)}
             />
+            </div>
 
             <div className="detailedInfo">
 

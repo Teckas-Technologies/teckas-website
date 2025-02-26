@@ -2,7 +2,7 @@
 
 
 .VideoCarouselSection {
-  padding: 5rem 0;
+  margin: 8rem 0;
   position: relative;
   max-height: max-content;
 
@@ -23,11 +23,10 @@
   }
 
   .title {
-    margin: 0 auto;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 500;
-    line-height: 3.5rem;
+    line-height: 2.5rem;
   }
   
   .subtitle {
@@ -35,10 +34,10 @@
     font-size: 1rem;
     margin: .5rem 0;
     line-height: 25px;
-    font-weight: lighter;
     text-align: center;
     width: min(1200px, 90%);
-    margin: 0 auto;
+    margin: 6rem auto;
+    margin-top: 1rem;
   }
 
   .featuredWorkContainer {

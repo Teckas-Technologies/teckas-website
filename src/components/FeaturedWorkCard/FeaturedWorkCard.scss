@@ -1,22 +1,20 @@
-
-
 .featuredWorkCard {
     max-width: max-content;
-    scale: .9;
+    scale: 1;
 
     .box {
-        background: rgba(white, .1);
-        border-radius: 1.5rem;
+        background: linear-gradient(60deg, rgba(white, .11), rgba(white, .12));
+        border-radius: 2.5rem;
         position: relative;
-        padding: 1.5rem;
+        padding: 1.9rem;
         height: 400px;
         width: 400px;
 
         .logoContainer {
             z-index: 2;
             position: absolute;
-            left: calc(2rem + .3rem);
-            top: calc(2rem + .3rem);
+            left: calc(2rem + .9rem);
+            top: calc(2rem + .9rem);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,7 +43,7 @@
             align-items: center;
             height: 100%;
             background-color: black;
-            border-radius: 1rem;
+            border-radius: 2rem;
             overflow: hidden;
 
             &::before {
@@ -69,13 +67,20 @@
 
             .text {
                 position: absolute;
-                bottom: -50%;
+                bottom: -60%;
                 left: 0;
+                font-size: 15px;
                 width: 100%;
                 color: white;
-                padding: 10px;
-                text-align: center;
+                padding: 15px;
+                padding-bottom: 50px;
+                text-align: left;
                 transition: bottom 0.4s ease-in-out;
+                .icony{
+                    width: 30px;
+                    margin-top: 20px;
+                    border-radius: 1rem;
+                }
             }
         }
 
@@ -96,4 +101,23 @@
         scale: .8;
         margin-top: 1rem;
     }
+}
+@media screen and (max-width: 1250px) {
+    .featuredWorkCard {
+        max-width: max-content;
+        scale: .9;
+      
+    }   
+
+}
+@media screen and (max-width: 450px) {
+    .featuredWorkCard {
+        max-width: max-content;
+        scale: .75;
+        .box{
+            padding: 1.5rem;
+
+        }
+    }   
+
 }

@@ -64,8 +64,7 @@ const Home: React.FC = () => {
                 imageURL={gfxvs}
                 name="GFXvs"
             /> */}
-
-
+            <div></div>
         </div>
     );
 }

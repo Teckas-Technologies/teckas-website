@@ -1,7 +1,8 @@
 import React from "react";
 import "./Footer.css";
-import { FaLinkedin, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa";
 import Logo from "../../img/Logo/logo.png";
+import twitter from "../../img/twitter.png";
 
 const Footer: React.FC = () => {
   return (
@@ -13,7 +14,8 @@ const Footer: React.FC = () => {
           </div>
           <div className="footer-social">
             <FaLinkedin className="social-icon" />
-            <FaTwitter className="social-icon" />
+            {/* <FaTwitter className="social-icon" /> */}
+            <img src={twitter} alt="twitter icon" className="social-icon" style={{ width: "30px" }} />
             <FaYoutube className="social-icon" />
             <FaInstagram className="social-icon" />
           </div>

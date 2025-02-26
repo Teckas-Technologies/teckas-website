@@ -26,9 +26,7 @@ const CollaborationSection: React.FC = () => {
                 <div className="title">
                     Trusted by Startups and Blockchain <br />Foundations Worldwide
                 </div>
-                <div className="title">
-                    
-                </div>
+                
 
                 <div className="subtitle">
                     We're proud to have collaborated with innovative startups and leading blockchain foundations to build impactful products.

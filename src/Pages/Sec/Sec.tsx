@@ -32,7 +32,7 @@ const Sec: React.FC = () => {
 
         <div className="bottom">
           <div className="clients">
-            <img src={client1} alt="Client 1" className="client-img" />
+            <img src={client1} alt="Client 1" className="client-img overlap" />
             <img src={client2} alt="Client 2" className="client-img overlap" />
             <img src={client3} alt="Client 3" className="client-img overlap" />
           </div>

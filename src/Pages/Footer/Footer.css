@@ -1,6 +1,6 @@
 /* Footer.css */
 .footer {
-  background-color: #000;
+  background-color: #00000000;
   color: #fff;
   font-family: 'Inter', sans-serif;
   padding:10%; /* Reduced padding */
@@ -33,7 +33,7 @@
 }
 
 .logo-image {
-  height: 50px;
+  height: 70px;
   width: auto;
   margin-right: 10px;
 }
@@ -70,7 +70,7 @@
 }
 
 .footer-heading {
-  font-size: 25px;
+  font-size: 24px;
   margin-bottom: 15px;
   text-align: left;
 }
@@ -84,7 +84,7 @@
 
 .footer-list li {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 18px;
   color: #ccc;
   line-height: 25px;
   width: 100%;
@@ -96,126 +96,139 @@
 }
 
 .footer-bottom {
-  padding-top: 10px;
-  margin-top: 40px;
+  margin-top: 7%;
   text-align: center;
 }
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
+  gap: 9%;
   width: 100%;
 }
-
-/* Responsive Media Queries */
-
-/* Tablets and small desktops */
-@media (max-width: 768px) {
+/* /* Large screens (1100px and below) */
+@media (max-width: 1100px) {
   .footer {
-    padding: 5%;
+    padding: 4%;
   }
 
-  .footer-container {
-    align-items: center;
+  .footer-list li {
+    font-size: 95%;
+  }
+  .footer-bottom{
+    
+    margin-top: 8%;
+    }
+}
+
+/* Medium-large screens (900px and below) */
+@media (max-width: 900px) {
+  .footer {
+    padding: 4%;
+    flex-direction: column;
     text-align: center;
   }
-
-  .footer-brand {
-    align-items: center;
+ 
+  .footer-list li {
+    line-height: 1rem;
+    font-size: 80%;
   }
+  .footer-heading {
+    font-size: 130%;
+    line-height: 1rem;
+  }
+}
 
+/* Tablets and small desktops (700px and below) */
+@media (max-width: 700px) {
+  .footer-heading {
+    font-size: 110%;
+  }
+  .footer-list li {
+    font-size: 70%;
+    line-height: .9rem;
+  }
   .footer-social {
     justify-content: center;
     margin-top: 10px;
   }
-
-  .footer-content {
-    
-    align-items: center;
-    justify-content: center;
-    
-  }
+  .footer-bottom{
+    scale: .9;
+    margin-top: 5%;
+    }
 }
 
-/* Medium-sized devices (Phablets, small tablets) */
+/* Medium-sized devices (600px and below) */
 @media (max-width: 600px) {
- 
-
-
-
-
+  .logo-image {
+    height: 55px;
+  }
   .footer-heading {
-    font-size: 22px;
+    font-size: 100%;
   }
-
   .footer-list li {
-    font-size: 18px;
+    font-size: 70%;
+    line-height: .7rem;
   }
-
-
-}
-@media (max-width: 500px) {
- 
-
-
-
-
-  .footer-heading {
-    line-height: .8rem;
-
-    font-size: 18px;
+  .footer-list{
+    line-height: 0%;
+    margin-bottom: 10%;
   }
-
-  .footer-list li {
-    line-height: 1.2rem;
-
-    font-size: 15px;
-  }
-  .social-icon {
-    font-size: 27px;
-  }
-
-
-}
-/* Small phones */
-@media (max-width: 400px) {
-  .footer {
-    padding: 7%;
-  }
-
-  .footer-heading {
-    font-size: 17px;
-    line-height: .5rem;
-  }
-
-  .footer-list li {
-    font-size: 14px;
+  .social-icon{
+    scale: .9;
+    }
+  .footer-content{
+    padding-left: 5%;
     line-height: 1rem;
-
   }
-
-  .social-icon {
-    font-size: 22px;
+  .footer-bottom{
+    scale: .8;
+    }
+}
+@media (max-width: 510px) {
+  .footer-content{
+    gap: 0%;
   }
 }
-
-/* Extra small devices */
-@media (max-width: 300px) {
-  .footer {
-    padding: 2%;
+/* Small screens (450px and below) */
+@media (max-width: 460px) {
+  .logo-image {
+    height: 50px;
   }
-
   .footer-heading {
     font-size: 18px;
+    line-height: 0.5rem;
   }
 
-
+  
 
   .footer-list li {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1rem;
+  }
+  .social-icon {
+    font-size: 30px;
+  }
+  .brand-logo {
+    scale: 0.8;
   }
 
-  .social-icon {
-    font-size: 20px;
+
+}
+
+/* Smaller phones (380px and below) */
+@media (max-width: 380px) {
+  .logo-image {
+    height: 45px;
+  }
+  .footer-heading {
+    font-size: 16px;
+  }
+  .footer-list li {
+    font-size: 12px;
+  }
+  .footer-social{
+    scale: .9;
   }
 }
+/* 
+/* Extra small phones (350px and below) */

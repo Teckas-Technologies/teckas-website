@@ -1,0 +1,99 @@
+
+.card {
+    position: relative;
+    background: linear-gradient(135deg, rgb(0, 0, 0), rgba(40, 38, 38, 0.769)); /* Inside background */
+    border-radius: 1rem;
+    color: white;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 230px;
+
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, white, black); /* Gradient border: white to black */
+    z-index: -1;
+    border-radius: 1rem; /* Matches the card's border radius */
+    padding: 1.5px; /* Border thickness */
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0); /* Masks the inner background */
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0); /* For modern browsers */
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
+  
+  
+  /* Header with Gradient */
+  .card-header {
+    position: relative;
+    background: linear-gradient(15deg, rgba(0, 0, 0, 0.711), rgba(73, 70, 70, 0.573)); /* Inside background */
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #8FDFFF;
+    font-weight: thin;
+    margin-bottom: 15px;
+    display: inline-block;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    max-width: max-content;
+  }
+  
+  .card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(-34deg, #252323, #55585c); /* Gradient border colors */
+    z-index: -1;
+    border-radius: 20px; /* Matches the card's border radius */
+    padding: 2px; /* Width of the gradient border */
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0); /* Creates the border effect */
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0); /* Modern browsers */
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
+  
+  
+  .card-text {
+    font-size: .7rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .card-icons {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-top: auto;
+  }
+  
+  .icon {
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  

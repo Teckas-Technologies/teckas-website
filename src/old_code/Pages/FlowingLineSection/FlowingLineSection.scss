@@ -1,0 +1,49 @@
+
+
+.FlowingLineSection {
+    width: 100%;
+    overflow: hidden;
+    padding: 3rem 0;
+    position: relative;
+
+    .flowingLineGridContainer {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+
+        .logoContainer {
+            width: 30%;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .flowingLineGrid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            justify-items: center;
+            grid-gap: 1rem;
+            overflow: hidden;
+        }
+
+        .cardsGrid {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            // display: grid;
+            // grid-template-columns: repeat(2, 1fr);
+
+            .card {
+                scale: .8;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}

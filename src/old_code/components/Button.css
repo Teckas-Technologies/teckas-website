@@ -1,0 +1,44 @@
+  .gradient-button {
+    position: relative;
+    padding: 20px 30px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+    background: rgba(6, 33, 43, .5);
+    border-radius: 17px;
+    background-clip: padding-box;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+  
+  .gradient-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    padding: 2.4px;
+    background: linear-gradient(45deg, #00B7FF, #FFFFFF);
+    -webkit-mask: 
+      linear-gradient(#09041D 0 0) content-box,
+      linear-gradient(#09041D 0 0);
+    mask: 
+      linear-gradient(#09041D 0 0) content-box,
+      linear-gradient(#09041D 0 0);
+    mask-composite: exclude;
+  }
+  .gradient-button:hover::before {
+    background: linear-gradient(90deg, #FFFFFF, #00B7FF);
+  }
+  
+  .gradient-button:hover,
+  .gradient-button:focus {
+    box-shadow: -10px -2px 30px -20px #00B7FF,
+                -10px -8px 30px -20px #00B7FF, 
+                -7px -20px 20px -30px #FFFFFF,
+                -7px -20px 20px -30px #FFFFFF, 
+                -7px -20px 20px -30px #FFFFFF;  
+  
+    transform: translateY(-0.2em);
+  }

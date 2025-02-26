@@ -1,5 +1,5 @@
 .CollaborationSection {
-    padding: 5rem 0;
+    padding: 8rem 0;
     position: relative;
 
     &::before {
@@ -26,27 +26,32 @@
     .title {
         margin: 0 auto;
         text-align: center;
-        font-size: 3rem;
+        font-size: 2.6rem;
+        line-height: 2.7rem;
         font-weight: 500;
     }
 
     .subtitle {
         opacity: .8;
         font-size: 1rem;
-        margin: .5rem 0;
+        color: rgb(255, 255, 255);
         line-height: 25px;
-        font-weight: lighter;
+        font-weight: 100;
         text-align: center;
-        width: min(800px, 90%);
+        width: min(920px, 90%);
+        width: 80%;
         margin: 0 auto;
+        margin-top: 2%;
+
     }
 
     .logosContainer {
-        margin: 2rem auto;
-        width: min(800px, 95%);
+        margin: 5rem auto;
+
+        width: 80%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: .25rem;
+        gap: 3rem;
         justify-items: center;
         align-items: center;
     }
@@ -56,13 +61,27 @@
         margin: 0 auto;
     }
 }
+@media screen and (max-width: 1200px){
+    .CollaborationSection .logosContainer {
+        width: 90%;
+    }
+}
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1100px){
+    // .hideInMobile {
+    //     display: none !important;
+    // }
+    .CollaborationSection .logosContainer {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 960px) {
     .CollaborationSection .logosContainer {
         width: 60%;
     }
 
     .CollaborationSection {
+
         .title {
             font-size: 280%;
             font-weight: 600;
@@ -117,6 +136,9 @@
 
 @media screen and (max-width: 650px) {
     .CollaborationSection {
+        .title{
+            margin:0% 1%;
+        }
         .center {
             font-size: 85%;
         }
@@ -133,14 +155,25 @@
 
 @media screen and (max-width: 500px) {
     .CollaborationSection {
+        padding-top: 10%;
+        .logosContainer{
+            width: 100%;
+            margin-top: 5%;
+            margin-bottom: 2%;
+            padding:0;
+        }
+        .title{
+            line-height: 2rem;
+        }
         .gradientText{
-            font-size: 10px;
+            font-size: 15px;
         }
         .center {
             font-size: 60%;
         }
         .subtitle {
             font-size: 100%;
+            margin-top: 2%;
         }
     }
 
@@ -151,14 +184,22 @@
 
 @media screen and (max-width: 390px) {
     .CollaborationSection {
+        
+        margin-top: 0%;
+        padding-bottom: 20%;
+        .logosContainer{
+            scale: .8;
+        }
         .gradientText{
             font-size: 10px;
         }
         .center {
             font-size: 50%;
+            font-weight: 100;
         }
         .subtitle {
-            font-size: 100%;
+            font-size: 110%;
+            font-weight: 100;
         }
     }
 

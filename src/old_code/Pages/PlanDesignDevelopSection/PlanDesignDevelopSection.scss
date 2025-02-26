@@ -1,0 +1,360 @@
+
+
+
+.PlanDesignDevelopSection {
+    padding: 0rem 4rem;
+    position: relative;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    // border: 4px solid hotpink;
+    box-sizing: border-box;
+    max-width: 100vw;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        // background-image: url("../../assets/collaborations/background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 75%, transparent 100%);
+    }
+
+    .glowingTextContainer {
+        // border: 2px solid blue;
+        padding: 2rem;
+        flex: 1;
+        min-width: 0;
+        
+        background-color: rgba(8, 7, 7, 0.656);
+    }
+
+    .detailedInfo {
+        min-width: 0;
+        // border: 2px solid red;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+            // border: 2px solid yellow;
+            width: 80%;
+            
+            .title {
+                margin: 0 auto;
+                // margin-bottom: 2rem;
+                width: 35%;
+            }  
+
+            .workflowExplanation {
+                position: relative;
+                width: 100%;
+                // overflow: hidden !important;
+                display: flex;
+
+                .text {
+                    max-width: 100%;
+                    flex: 1 0 100%;
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    // margin-bottom: 5rem;
+
+                    letter-spacing: -.075rem;
+                    opacity: 0;
+
+                    transition: all 1s ease;
+
+                    &.active {
+                        opacity: 1;
+                        font-size: 2rem;
+                        // margin-bottom: 5rem;
+                        line-height: 3rem;
+
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    @for $i from 1 through 5 {
+                        &:nth-child(#{$i}) {
+                            transform: translateX(#{-100% * ($i - 1)});
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+// @media (max-width: 1400px) {
+
+//     .PlanDesignDevelopSection {
+//         padding: 0 1rem;
+
+//         .detailedInfo {
+//             border: 6px solid cyan;
+//             position: relative;
+//             width: 100%;
+//         }
+        
+//         .content {
+//             position: relative;
+//             max-width: 100% !important;
+//             width: 100% !important;
+
+//             .title {
+//                 width: 40%;
+//             }
+//         }
+
+//         .detailedInfo .content .workflowExplanation .text {
+//             font-size: 2.25rem;
+//             line-height: 2.75rem;
+//         }
+//         .glowingTextContainer .glowingText {
+//             font-size: 4.5rem;
+//             line-height: 5rem;
+//         }
+//     }
+// }
+
+// @media (max-width: 1200px) {
+//     .PlanDesignDevelopSection .detailedInfo .content {
+        
+//         .title {
+//             margin-bottom: 1rem !important;
+//         }
+
+//         .text {
+//             font-size: 2rem;
+//             line-height: 2.5rem;
+//         }
+//     }
+//     .PlanDesignDevelopSection .glowingTextContainer .glowingText {
+//         font-size: 3rem !important;
+//         line-height: 3.5rem;
+//     }
+// }
+
+@media (max-width: 992px) {
+
+    .PlanDesignDevelopSection {
+        padding: 0;
+        padding-left: 1rem;
+    }
+
+    .PlanDesignDevelopSection .detailedInfo {
+        padding: 0;
+        flex: 1.2;
+
+        .content {
+            padding: 0;
+
+            .text {
+                max-width: 100%;
+            }
+        }
+    
+        .content .workflowExplanation .text {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        transition: all 0s ease;
+        }
+    }
+
+    .PlanDesignDevelopSection .glowingTextContainer {
+        padding: 0;
+        
+        .glowingText {
+            font-size: 4.5rem !important;
+            line-height: 5rem;
+        }
+    }
+    .workflowExplanation {
+        scale: .8;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .PlanDesignDevelopSection {
+
+        .content {
+            .title {
+                // margin-bottom: 1rem !important;
+                // width: 50% !important;
+            }
+        }
+        .workflowExplanation {
+            // scale: .7;
+        }
+    }
+
+    .PlanDesignDevelopSection .detailedInfo .content .workflowExplanation .text {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+    }
+    .PlanDesignDevelopSection .glowingTextContainer {
+        padding: 0; 
+        .glowingText {
+            font-size: 3.5rem !important;
+            line-height: 4.5rem;
+        }
+    }
+}
+
+@media (max-width: 658px) {
+    
+
+ 
+    
+
+    .PlanDesignDevelopSection .detailedInfo .content .workflowExplanation .text {
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+    .PlanDesignDevelopSection .glowingTextContainer {
+        .glowingText {
+            font-size: 3.5rem !important;
+            line-height: 4.5rem;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+
+    .PlanDesignDevelopSection{
+        
+        .content {
+            .title {
+                // width: 50% !important;
+                display: none;
+            }
+        }
+        .workflowExplanation {
+            scale: .6;
+           margin: 0;
+           .text{
+            font-size: small;
+           }
+        }
+    }
+    .PlanDesignDevelopSection .detailedInfo {
+        flex: 1 !important;
+    
+        .content {
+        .workflowExplanation {
+            scale: .5;
+            width: 260%;
+            margin-left: -80%;
+           .text{
+            font-size: 1rem;
+           }
+        }
+        }
+    }
+
+
+    .PlanDesignDevelopSection .glowingTextContainer {
+        padding: 0;
+        
+        .glowingText {
+            font-size: 2rem !important;
+            line-height: 3rem;
+        }
+    }
+}
+
+@media (max-width: 476px) {
+
+    .PlanDesignDevelopSection{
+        
+        .content {
+            .title {
+                // width: 80% !important;
+                display: none;
+            }
+        }
+        .workflowExplanation {
+            scale: .6;
+           margin: 0;
+           .text{
+            font-size: small;
+           }
+        }
+    }
+    .PlanDesignDevelopSection .detailedInfo {
+        flex: 1 !important;
+    
+        .content {
+        .workflowExplanation {
+            scale: .45;
+            // width: 300%;
+            margin-left: -80%;
+            
+           .text{
+            font-size: 1rem;
+           }
+        }
+        }
+    }
+
+
+    .PlanDesignDevelopSection .glowingTextContainer {
+        padding: 0;
+        
+        .glowingText {
+            font-size: 2rem !important;
+            line-height: 3rem;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .PlanDesignDevelopSection{
+        .content {
+            .title {
+                width: 150% !important;
+            }
+        }
+    }
+    .PlanDesignDevelopSection .detailedInfo {
+        flex: 1 !important;
+       
+    
+        .content {
+        .workflowExplanation {
+            scale: .35;
+            width: 300%;
+            margin-left: -80%;
+           .text{
+            font-size: 1rem;
+           }
+        }
+        }
+    }
+
+
+    .PlanDesignDevelopSection .glowingTextContainer {
+        padding: 0;
+        
+        .glowingText {
+            font-size: 2.5rem !important;
+            line-height: 3rem;
+        }
+    }
+}

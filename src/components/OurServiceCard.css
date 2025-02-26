@@ -1,7 +1,7 @@
 
 .card {
     position: relative;
-    background: linear-gradient(135deg, rgb(0, 0, 0), rgba(40, 38, 38, 0.769)); /* Inside background */
+    background: linear-gradient(135deg, rgba(55, 51, 51, 0.189), rgba(40, 38, 38, 0.969)); /* Inside background */
     border-radius: 1rem;
     color: white;
     padding: 20px;
@@ -28,7 +28,7 @@
     background: linear-gradient(135deg, white, black); /* Gradient border: white to black */
     z-index: -1;
     border-radius: 1rem; /* Matches the card's border radius */
-    padding: 1.5px; /* Border thickness */
+    padding: .6px; /* Border thickness */
     -webkit-mask: 
       linear-gradient(#fff 0 0) content-box, 
       linear-gradient(#fff 0 0); /* Masks the inner background */
@@ -63,7 +63,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(-34deg, #252323, #55585c); /* Gradient border colors */
+    background: linear-gradient(-34deg, #25232300, #55585c); /* Gradient border colors */
     z-index: -1;
     border-radius: 20px; /* Matches the card's border radius */
     padding: 2px; /* Width of the gradient border */
@@ -79,7 +79,7 @@
   
   
   .card-text {
-    font-size: .7rem;
+    font-size: .75rem;
     margin-bottom: 20px;
     line-height: 1.5;
   }
@@ -87,8 +87,9 @@
   .card-icons {
     display: flex;
     justify-content: left;
-    gap: 10px;
-    margin-top: auto;
+    gap: 1px;
+    scale: .8;
+    margin-right: 100%;
   }
   
   .icon {
@@ -97,3 +98,28 @@
   }
   
   
+  @media (max-width: 1250px){
+    .card{
+      scale:.9;
+    }
+  }
+  @media (max-width: 1150px){
+    .card{
+      scale:.7;
+    }
+  }
+  @media (max-width: 950px){
+    .card{
+      scale:1.2;
+    }
+  }
+  @media (max-width: 500px){
+    .card{
+      scale:1.1;
+    }
+  }
+  @media (max-width: 400px){
+    .card{
+      scale:1;
+    }
+  }

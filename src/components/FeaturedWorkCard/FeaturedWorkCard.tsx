@@ -9,7 +9,8 @@ type FeaturedWorkCardType = {
     name: string,
     image: string,
     logo: string,
-    text: string
+    text: string,
+    icon: string
 }
 
 const FeaturedWorkCard: FC<FeaturedWorkCardType> = (props) => {
@@ -26,8 +27,12 @@ const FeaturedWorkCard: FC<FeaturedWorkCardType> = (props) => {
                 <div className="imageContainer">
                     <img src={props.image} alt={props.name} />
                     <div className="text">
-                        {props.text}
+                           <div className="texty">
+                           {props.text}
+                           </div>
+                    <img src={props.icon} alt={props.icon} className="icony"/>
                     </div>
+                   
                 </div>
             </div>
 

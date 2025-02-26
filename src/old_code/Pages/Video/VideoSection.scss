@@ -1,0 +1,337 @@
+
+
+
+.VideoCarouselSection {
+  padding: 5rem 0;
+  position: relative;
+  max-height: max-content;
+
+  &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      // background-image: url("../../assets/collaborations/background.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 75%, transparent 100%);
+  }
+
+  .title {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3.5rem;
+  }
+  
+  .subtitle {
+    opacity: .8;
+    font-size: 1rem;
+    margin: .5rem 0;
+    line-height: 25px;
+    font-weight: lighter;
+    text-align: center;
+    width: min(1200px, 90%);
+    margin: 0 auto;
+  }
+
+  .featuredWorkContainer {
+      margin: 2rem auto;
+      width: min(1200px, 95%);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: .25rem;
+      justify-items: center;
+      align-items: center;
+  }
+
+  .buttonContainer {
+      max-width: max-content;
+      margin: 0 auto;
+  }
+}
+
+.up {
+  
+    .top {
+      width: 100%; // Keep the full width
+      margin: 20px auto; // Center content vertically within its space
+      padding-top: 20%; // Add padding for spacing
+      border-radius: 8px; // Rounded corners for modern design
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
+  
+      h1 {
+        font-size: 1rem;
+        font-weight: 100;
+        margin-bottom: 8px;
+        
+        text-align: center;
+        background: linear-gradient(50deg, #FFFFFF, #0899e2); // Define the gradient
+        -webkit-background-clip: text; // Clip the background to the text
+        -webkit-text-fill-color: transparent; // Make the text transparent to show the gradient
+      }
+      
+      h2{
+        font-size: 380%;
+        padding-top: 2%;
+        text-align: center;
+        line-height: 5px;
+        font-weight: 100;
+
+      }
+  
+      p {
+        font-size: 150%;
+        text-align: center;
+
+        padding-top: 5%;
+        color: #666;
+      }
+    }
+  }
+  
+.carousel {
+    overflow: hidden; // Ensures only visible items are displayed
+    width: 100%; // Full width of the container
+    height: 300px; // Adjust height to match content
+    display: flex;
+    justify-content: baseline;
+    align-items: last baseline;
+    
+  
+    .carousel-track {
+      display: flex;
+      gap: 20px; // Space between items
+      animation: scroll 100s linear infinite; // Smooth infinite scrolling animation
+      will-change: transform; // Optimizes animation for better performance
+      width: max-content; // Ensure track expands as needed to fit all items
+
+      // 
+      &:hover {
+        animation-play-state: paused;
+      }
+      // 
+  
+      // Carousel items
+      .carousel-item {
+        position: relative;
+        flex: 0 0 auto; // Prevent items from shrinking or growing
+        width: 350px; // Set width for each item
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(70deg, #09090920, #2628299b); // Define the gradient
+        border-radius: 20px; // Rounded corners (optional)
+      }
+    }
+  
+    // Smooth infinite scroll animation
+    @keyframes scroll {
+      0% {
+        transform: translateX(0); // Initial position
+      }
+      100% {
+        transform: translateX(-100%); // Scroll full width of the track
+      }
+    }
+  }
+
+  .up {
+    display: flex; // Optional: Adjust alignment if needed
+    justify-content: center;
+  
+    .top {
+      width: 100%; // Keep the full width
+      margin: 20px auto; // Center content vertically within its space
+      padding-top: 20%; // Add padding for spacing
+      border-radius: 8px; // Rounded corners for modern design
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
+  
+      h1 {
+        font-size: 1rem;
+        font-weight: 100;
+        margin-bottom: 8px;
+        text-align: center;
+        background: linear-gradient(50deg, #ffffff, #0899e2); // Define the gradient
+        -webkit-background-clip: text; // Clip the background to the text
+        -webkit-text-fill-color: transparent; // Make the text transparent to show the gradient
+      }
+  
+      h2 {
+        font-size: 380%;
+        padding-top: 2%;
+        text-align: center;
+        line-height: 50px;
+        font-weight: 100;
+      }
+  
+      p {
+        font-size: 150%;
+        text-align: center;
+        padding-top: 5%;
+        color: #666;
+      }
+    }
+  
+    // Media Queries
+    @media (max-width: 1400px) {
+      width: 90%; // Adjust the width
+     
+      .top {
+        padding-top: 10%;
+        h1 {
+          font-size: 0.9rem;
+        }
+        h2 {
+          font-size: 350%;
+        }
+        p {
+          font-size: 140%;
+        }
+      }
+    }
+    @media (max-width: 1200px) {
+      width: 90%; // Adjust the width
+     
+      .top {
+        padding-top: 10%;
+        h1 {
+          font-size: 0.9rem;
+        }
+        h2 {
+          font-size: 350%;
+        }
+        p {
+          font-size: 140%;
+        }
+      }
+    }
+    @media (max-width: 1100px) {
+      width: 90%; // Adjust the width
+     
+      .top {
+        padding-top: 16%;
+        h1 {
+          font-size: 1rem;
+        }
+        h2 {
+          font-size: 350%;
+        }
+        p {
+          font-size: 140%;
+        }
+      }
+    }
+  
+    @media (max-width: 1000px) {
+      width: 90%; // Adjust the width
+     
+      .top {
+        padding-top: 20%;
+        h1 {
+          font-size: 0.9rem;
+        }
+        h2 {
+          font-size: 350%;
+        }
+        p {
+          font-size: 140%;
+        }
+      }
+    }
+  
+    @media (max-width: 850px) {
+      width: 80%;
+      .top {
+        padding-top: 20%;
+        h1 {
+          font-size: 0.85rem;
+        }
+        h2 {
+          font-size: 320%;
+        }
+        p {
+          font-size: 130%;
+        }
+      }
+    }
+  
+    @media (max-width: 750px) {
+      width: 100%;
+      .top {
+        padding-top: 20%;
+        h1 {
+          font-size: 0.8rem;
+          
+        }
+        h2 {
+          font-size: 300%;
+          padding: 0;
+        }
+        p {
+          font-size: 120%;
+          padding: 10px;
+        }
+      }
+    }
+  
+    @media (max-width: 650px) {
+      width: 70%;
+      padding-top: 5%;
+      .up{
+        .top {
+          padding-top: 0%;
+          
+          h1 {
+            font-size: 0.75rem;
+          }
+          h2 {
+            font-size: 280%;
+          }
+          p {
+            font-size: 110%;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 450px) {
+      width: 85%;
+      .top {
+        padding-top: 40%;
+        h1 {
+          font-size: 0.7rem;
+        }
+        h2 {
+          font-size: 250%;
+        }
+        p {
+          font-size: 100%;
+        }
+      }
+    }
+  
+    @media (max-width: 380px) {
+      width: 90%;
+      .top {
+        padding-top: 40%;
+        h1 {
+          font-size: 0.65rem;
+        }
+        h2 {
+          font-size: 220%;
+        }
+        p {
+          font-size: 90%;
+        }
+      }
+    }
+
+  }
+  

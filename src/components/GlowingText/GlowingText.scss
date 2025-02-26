@@ -1,31 +1,34 @@
-
 .glowingTextContainer {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-color: transparent;
     max-width: max-content;
 
     .glowingText {
-        font-size: 7rem;
-        line-height: 7rem;
+        font-size: 8rem;
+        line-height: 8rem;
         max-height: max-content;
         font-weight: 900;
-        color: rgb(34, 203, 255);
-        opacity: .75;
+        color: rgb(3, 193, 251);
+
+        opacity: .4;
+        
         user-select: none;
     }
 
     .light {
+
         z-index: 8;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        opacity: 1;
         pointer-events: none;
+        
         background: radial-gradient(circle at var(--x) var(--y), transparent 5%, black 10%);
         mix-blend-mode: hue;
     }
