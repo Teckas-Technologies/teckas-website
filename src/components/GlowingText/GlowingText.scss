@@ -11,7 +11,7 @@
         line-height: 8rem;
         max-height: max-content;
         font-weight: 900;
-        color: rgb(3, 193, 251);
+        // color: rgb(3, 193, 251);
 
         opacity: .4;
         
@@ -30,6 +30,5 @@
         pointer-events: none;
         
         background: radial-gradient(circle at var(--x) var(--y), transparent 5%, black 10%);
-        mix-blend-mode: hue;
     }
 }
