@@ -5,12 +5,17 @@ import Button from "../Button";
 
 import "./FeaturedWorkCard.scss";
 
+type FeaturedWorkCardIconType = {
+    name: string,
+    icon: string,
+}
+
 type FeaturedWorkCardType = {
     name: string,
     image: string,
     logo: string,
     text: string,
-    icon: string
+    icon: FeaturedWorkCardIconType[]
 }
 
 const FeaturedWorkCard: FC<FeaturedWorkCardType> = (props) => {
@@ -30,7 +35,20 @@ const FeaturedWorkCard: FC<FeaturedWorkCardType> = (props) => {
                            <div className="texty">
                            {props.text}
                            </div>
-                    <img src={props.icon} alt={props.icon} className="icony"/>
+
+                    <div className="icons">
+                        {
+                            props.icon.map((icon, index) => {
+                                return (
+                                    <span key={index} className="icon">
+                                        <img src={icon.icon} alt={icon.name}/>
+                                        <span>{icon.name}</span>
+                                    </span>
+                                )
+                            })
+                        }
+                    </div>
+                    {/* <img src={props.icon} alt={props.icon} className="icony"/> */}
                     </div>
                    
                 </div>

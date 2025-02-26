@@ -18,16 +18,22 @@ import cgmWork from "../../assets/featured-work/cgm.png";
 import ciarusWork from "../../assets/featured-work/ciarus.png";
 import ncrWork from "../../assets/featured-work/ncr.png";
 import sinWork from "../../assets/featured-work/sin.png";
-import i1 from "../../assets/featured-work/11.png";
+import near from "../../assets/featured-work/near.png";
 import i2 from "../../assets/featured-work/22.png";
-import i3 from "../../assets/featured-work/33.png";
-import i4 from "../../assets/featured-work/44.png";
+import openai from "../../assets/featured-work/openai.png";
+import next from "../../assets/featured-work/next.png";
+
+type FeaturedWorkCardIconType = {
+    name: string,
+    icon: string,
+}
+
 type FeaturedWorkType = {
     name: string,
     logo: string,
     image: string,
     text: string,
-    icon: string,
+    icon: FeaturedWorkCardIconType[],
 }
 
 const featuredWork: FeaturedWorkType[] = [
@@ -36,35 +42,52 @@ const featuredWork: FeaturedWorkType[] = [
         logo: gfxvs,
         image: gfxvsWork,
         text: "A gamified art battle platform leveraging blockchain technology and Web3 integrations.",
-        icon : i1,
+        icon : [
+            { name: "Next.js", icon: next },
+            { name: "Mintbase", icon: i2 },
+            { name: "NEAR Blockchain", icon: near },
+        ],
     },
     {
         name: "SIN Staking Platform",
         logo: sin,
         image: sinWork,
         text: "A gamified art battle platform leveraging blockchain technology and Web3 integrations.",
-        icon : i2
+        icon : [
+            { name: "Next.js", icon: next },
+            { name: "NEAR Blockchain", icon: near },
+        ],
     },
     {
         name: "NCR Course",
         logo: ncr,
         image: ncrWork,
         text: "A gamified art battle platform leveraging blockchain technology and Web3 integrations.",
-        icon: i3
+        icon : [
+            { name: "Next.js", icon: next },
+            { name: "Mintbase", icon: i2 },
+            { name: "NEAR Blockchain", icon: near },
+        ],
     },
     {
         name: "Clarus Blockchain & Wallet",
         logo: clarus,
         image: ciarusWork,
         text: "A gamified art battle platform leveraging blockchain technology and Web3 integrations.",
-        icon: i4
+        icon : [
+            { name: "Next.js", icon: next },
+            { name: "Open AI Integration", icon: openai },
+        ],
     },
     {
         name: "CGM Assistant",
         logo: cgm,
         image: cgmWork,
         text: "A gamified art battle platform leveraging blockchain technology and Web3 integrations.",
-        icon: i4
+        icon : [
+            { name: "Next.js", icon: next },
+            { name: "Open AI Integration", icon: openai },
+        ],
     },
 ]
 
