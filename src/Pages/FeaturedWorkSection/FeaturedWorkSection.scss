@@ -39,14 +39,13 @@
     .wrapper {
 
     .featuredWorkContainer {
-        margin: 2rem auto;
-        width: min(1200px, 95%);
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        column-gap: 7rem;
-        row-gap: 2rem;
-        justify-items: center ;
+        margin: 0 auto;
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
         align-items: center;
+        justify-content: center;  
         
         // width: 100px;
         // height: 66px;
