@@ -18,19 +18,19 @@ const Header: React.FC = () => {
         <img src={logo1} alt="Teckas Technologies Logo" className="logo" />
 
         <div className="header-icons">
-          <div className="rectangle portfolio">
+          <a className="rectangle portfolio" href="#portfolio">
             <span>Portfolio</span>
             <img src={portfolio} alt="Portfolio Icon" className="portfolio-btn" />
-          </div>
-          <div className="circle dns">
+          </a>
+          <a className="circle dns" href="#dns">
             <img src={world} alt="DNS Services" className="icon" />
-          </div>
-          <div className="circle message">
+          </a>
+          <a className="circle message" href="#message">
             <img src={message} alt="Message" className="icon" />
-          </div>
-          <div className="circle call">
+          </a>
+          <a className="circle call" href="#call">
             <img src={call} alt="Call us" className="icon" />
-          </div>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}

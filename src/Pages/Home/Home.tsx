@@ -19,10 +19,14 @@ const Home: React.FC = () => {
 
             <Sec />
             <CollaborationSection />
+            <a href="" id="portfolio"></a>
             <FeaturedWorkSection />
             <FlowingLineSection />
+            <a href="" id="dns"></a>
             <VideoSection />
+            <a href="" id="message"></a>
             <PlanDesignDevelopSection />
+            <a href="" id="call"></a>
             <CtaSection />
             <Footer />
             
