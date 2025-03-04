@@ -138,13 +138,53 @@
 @media (max-width: 600px) {
         .cardsGrid{
           align-items: center;
-          
+        
           .lt, .ld, .rt, .rd {
             flex: 1 1 100%; // Stack items vertically
             max-width: 100%;
           }
         }
+        .toppy{
+            .gradientText{
+                font-family: 1.6rem;
+            }
+            .title{
+                font-size: 2.4rem;
+            }
+            .subtitle{
+                scale: .9;
+            }
+        }
     }
 
-      
-  
+@media (max-width: 450px) {
+        .cardsGrid{
+          align-items: center;
+        
+          .lt, .ld, .rt, .rd {
+            flex: 1 1 100%; // Stack items vertically
+            max-width: 100%;
+          }
+        }
+        .toppy{
+         
+            .title{
+                font-size: 2rem;
+            }
+            .subtitle{
+                scale: .8;
+            }
+        }
+    }
+@media (max-width: 380px) {
+
+        .toppy{
+         
+            .title{
+                font-size: 1.9rem;
+            }
+            .subtitle{
+                scale: .75;
+            }
+        }
+}
