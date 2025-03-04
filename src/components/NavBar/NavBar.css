@@ -98,13 +98,18 @@
 }
 
 .Home:has(.mobile-menu.open) .header {
-  border-radius: 30px 30px 0 0;
+  border-radius:0;
+  
 }
 
 .Home:has(.mobile-menu.open) .header::before {
-  border-radius: 30px 30px 0 0;
-  padding-bottom: 0;
-  background: #e6dadaef;
+  border-radius: 0px 0px 0 0;
+  padding: 0;
+  background: linear-gradient(0deg, #e6dada00, #ffffff00);
+  -webkit-mask: linear-gradient(#ffffff00 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#ffffff00 0 0) content-box, linear-gradient(#fff 0 0);
+  
+  
 }
 
 /* Mobile Dropdown Menu */
@@ -117,13 +122,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 1.5rem;
   z-index: 9;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   transform: translateY(-100%);
   opacity: 0;
   visibility: hidden;
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 
 .mobile-menu.open {
@@ -133,12 +137,11 @@
 }
 
 .mobile-menu-container {
-  background-color: rgb(0, 0, 0);
-  width: 98%;
+  background-color: rgba(0, 0, 0, 0.732);
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   border: 1px solid white;
-  border-color: transparent #e6dadaef #e6dadaef #e6dadaef;
   border-radius: 1rem;
 }
 
@@ -181,7 +184,7 @@
 @media (max-width: 800px) {
 
 
-  .container:has(.mobile-menu.open) .header {
+  /* .container:has(.mobile-menu.open) .header {
     border-radius: 20px 20px 0 0;
     backdrop-filter: none;
     background-color: transparent;
@@ -192,13 +195,16 @@
     border-radius: 20px 20px 0 0;
     padding-bottom: 0;
     background-color: black;
-  }
+  } */
 
   .header {
     width: 90%;
     padding-right: 1.5rem;
     height: 10%;
 
+  }
+  .mobile-menu-container{
+    width: 100%;
   }
 
   .header .header-icons {
@@ -217,13 +223,11 @@
     border-radius: 20px 20px 0 0;
     backdrop-filter: none;
     background-color: transparent;
-    background-color: black;
   }
 
   .container:has(.mobile-menu.open) .header::before {
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 20px 20px0;
     padding-bottom: 0;
-    background-color: black;
   }
   .logo{
     padding: 4px;
@@ -237,5 +241,27 @@
 
   .menu-button {
     display: block;
+  }
+}
+@media (max-width: 500px) {
+  .mobile-menu-container{
+    width: 100%;
+  }
+  .mobile-menu ul {
+    list-style-type: none;
+    margin-top: 20px;
+    line-height: 7vh;
+  }
+  
+  .mobile-menu li {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.142);
+    position: relative;
+  }
+  .header{
+    width: 85%;
+    background-color: transparent;
+    padding: 3%;
   }
 }
