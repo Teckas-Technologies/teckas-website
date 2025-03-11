@@ -28,7 +28,7 @@ const Sec: React.FC = () => {
           Blockchain, AI, Web, and Mobile apps. Let's make something awesome together!
         </p>
 
-        <Button className="chat-button" text="Got an Idea? Let's Chat!" />
+        <Button className="chat-button" text="Got an Idea? Let's Chat!" path={"forum"} />
 
         <div className="bottom">
           <div className="clients">
