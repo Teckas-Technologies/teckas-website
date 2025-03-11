@@ -42,7 +42,7 @@ const CollaborationSection: React.FC = () => {
                 <CollaborationLogo className='hideInMobile' logo={sin} name='SIN' />
             </div>
 
-            <Button text='Have a Project in mind?' />
+            <Button text='Have a Project in mind?' path='forum' />
 
         </div>
     );

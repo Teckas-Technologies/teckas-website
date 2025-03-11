@@ -3,6 +3,7 @@ import "./Footer.css";
 import { FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa";
 import Logo from "../../img/Logo/logo.png";
 import twitter from "../../img/twitter.png";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -13,11 +14,11 @@ const Footer: React.FC = () => {
             <img src={Logo} alt="Teckas Technologies Logo" className="logo-image" />
           </div>
           <div className="footer-social">
-            <FaLinkedin className="social-icon" />
+            <FaLinkedin className="social-icon" onClick={()=> window.open("https://www.linkedin.com/company/teckas/", "_blank")} />
             {/* <FaTwitter className="social-icon" /> */}
-            <img src={twitter} alt="twitter icon" className="social-icon" style={{ width: "30px" }} />
-            <FaYoutube className="social-icon" />
-            <FaInstagram className="social-icon" />
+            <img src={twitter} alt="twitter icon" className="social-icon" style={{ width: "30px" }} onClick={()=> window.open("https://x.com/0xteckas", "_blank")} />
+            <FaYoutube className="social-icon" onClick={()=> window.open("https://www.youtube.com/@immanueljohnsoftware", "_blank")} />
+            <FaInstagram className="social-icon" onClick={()=> window.open("https://www.instagram.com/teckas_technologies/", "_blank")} />
           </div>
         </div>
         <hr className="blue-line" />
@@ -36,7 +37,8 @@ const Footer: React.FC = () => {
             <h2 className="footer-heading">Company</h2>
             <ul className="footer-list">
               <li>About us</li>
-              <li>Case Studies</li>
+              <li><Link to="/blogs" className="link">Blogs</Link></li>
+              <li><Link to="/case-study" className="link">Case Studies</Link></li>
               <li>Careers</li>
               <li>Contact</li>
             </ul>

@@ -54,7 +54,7 @@ const FeaturedWorkCard: FC<FeaturedWorkCardType> = (props) => {
                 </div>
             </div>
 
-            <Button text={`Visit ${props.name}`} />
+            <Button text={`Visit ${props.name}`} path={props.name} />
         </div>
     )
 };

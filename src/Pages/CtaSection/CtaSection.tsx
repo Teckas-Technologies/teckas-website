@@ -17,7 +17,7 @@ export const CtaSection: React.FC = () => {
             </div>
 
             <Button 
-                text="Start your Journey Today"
+                text="Start your Journey Today" path="forum"
             />
 
         </div>
