@@ -10,8 +10,16 @@ type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = (props) => {
   const navigate = useNavigate();
+  const handleClick = () => {
+    if (props.path === "forum") {
+      window.open(`/${props.path}`, "_blank"); // Opens in new tab
+    } else {
+      navigate(`/${props.path}`); // Navigates normally
+    }
+  };
+
   return (
-    <div className="buttonContainer" onClick={() => navigate(`/${props.path}`)}>
+    <div className="buttonContainer" onClick={handleClick}>
       <button className={"gradient-button " + props.className}>{props.text ?? "Success needs your wish"}</button>
     </div>
   );
