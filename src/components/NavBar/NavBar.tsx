@@ -22,13 +22,13 @@ const Header: React.FC = () => {
             <span>Portfolio</span>
             <img src={portfolio} alt="Portfolio Icon" className="portfolio-btn" />
           </a>
-          <a className="circle dns" href="#dns">
+          <a className="circle dns" href="/forum" target="_blank">
             <img src={world} alt="DNS Services" className="icon" />
           </a>
-          <a className="circle message" href="#message">
+          <a className="circle message" href="/forum" target="_blank">
             <img src={message} alt="Message" className="icon" />
           </a>
-          <a className="circle call" href="#call">
+          <a className="circle call" href="/forum" target="_blank">
             <img src={call} alt="Call us" className="icon" />
           </a>
         </div>
