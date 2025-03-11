@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home.tsx";
 import BlogPage from "./Pages/BlogPage/BlogPage.tsx";
 import CaseStudy from "./Pages/CaseStudy/CaseStudy.tsx";
+import ForumPage from "./Pages/ForumPage/ForumPage.tsx";
 // import Footer from "./Pages/Footer/Footer";
 
 const App: React.FC = () => {
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/forum" element={<ForumPage />} />
         <Route path="/case-study" element={<CaseStudy />} />
         {/* <Route path="/*" element={<Footer />} /> */}
       </Routes>
