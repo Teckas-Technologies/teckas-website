@@ -105,7 +105,7 @@ const AddBlog: React.FC = () => {
                     <div className="row">
                         <div className="form-input">
                             <h4>Image URL:</h4>
-                            <input type="text" name="imageUrl" value={blogData.imageUrl} onChange={handleChange} placeholder="Enter sub title for the Blog..." className='search' />
+                            <input type="text" name="imageUrl" value={blogData.imageUrl} onChange={handleChange} placeholder="Enter URL of the image..." className='search' />
                         </div>
                         <div className="form-input">
                             <h4>Blog Type:</h4>
@@ -123,7 +123,7 @@ const AddBlog: React.FC = () => {
                     </div>
                     <div className="form-input">
                         <h4>Content:</h4>
-                        <textarea name="content" value={blogData.content} onChange={handleChange} placeholder="Enter sub title for the Blog..." style={{ minHeight: 150, background: "transparent", padding: 8, borderRadius: 10, outline: "none" }} className='search' />
+                        <textarea name="content" value={blogData.content} onChange={handleChange} placeholder="Enter the content for blog..." style={{ minHeight: 150, background: "transparent", padding: 8, borderRadius: 10, outline: "none" }} className='search' />
                     </div>
 
                     <div className="btn-holder">
