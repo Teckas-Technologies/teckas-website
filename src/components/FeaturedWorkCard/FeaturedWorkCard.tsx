@@ -15,7 +15,8 @@ type FeaturedWorkCardType = {
     image: string,
     logo: string,
     text: string,
-    icon: FeaturedWorkCardIconType[]
+    icon: FeaturedWorkCardIconType[],
+    siteUrl: string;
 }
 
 const FeaturedWorkCard: FC<FeaturedWorkCardType> = (props) => {
@@ -54,7 +55,7 @@ const FeaturedWorkCard: FC<FeaturedWorkCardType> = (props) => {
                 </div>
             </div>
 
-            <Button text={`Visit ${props.name}`} path={props.name} />
+            <Button text={`Visit ${props.name}`} siteUrl={props.siteUrl} />
         </div>
     )
 };

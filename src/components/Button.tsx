@@ -6,25 +6,16 @@ type ButtonProps = {
   text?: string
   className?: string
   path?: string
+  siteUrl?: string
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
   const navigate = useNavigate();
   const handleClick = () => {
-    if (props.path === "forum") {
-      window.open(`/${props.path}`, "_blank"); // Opens in new tab
-    } else if (props.path === "GFXvs") {
-      window.open("https://www.gfxvs.com/", "_blank");
-    } else if (props.path === "SIN Staking Platform") {
-      window.open("https://sin-staking.vercel.app/", "_blank");
-    } else if (props.path === "NCR Course") {
-      window.open("https://ncrcourse.vercel.app/", "_blank");
-    } else if (props.path === "Clarus Blockchain & Wallet") {
-      window.open("https://www.myidcoinsale.com/", "_blank");
-    } else if (props.path === "CGM Assistant") {
-      window.open("https://cgm-assistant-fe.vercel.app/", "_blank");
+    if (props.siteUrl) {
+      window.open(`${props.siteUrl}`, "_blank"); // Opens in new tab
     } else {
-      navigate(`/${props.path}`); // Navigates normally
+      navigate(`/${props.path}`); // Navigates inside
     }
   };
 
