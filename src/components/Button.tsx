@@ -7,6 +7,9 @@ type ButtonProps = {
   className?: string
   path?: string
   siteUrl?: string
+  isSubmit?: boolean;
+  submitFunction?: any;
+  disable?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
@@ -20,8 +23,8 @@ const Button: React.FC<ButtonProps> = (props) => {
   };
 
   return (
-    <div className="buttonContainer" onClick={handleClick}>
-      <button className={"gradient-button " + props.className}>{props.text ?? "Success needs your wish"}</button>
+    <div className="buttonContainer" onClick={() => {props.isSubmit ? props.submitFunction() : handleClick()}}>
+      <button className={"gradient-button " + props.className} disabled={props.disable || false}>{props.text ?? "Success needs your wish"}</button>
     </div>
   );
 };

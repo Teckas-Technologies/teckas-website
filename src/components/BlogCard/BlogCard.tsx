@@ -33,7 +33,7 @@ const BlogCard: React.FC<BlogCardType> = (props) => {
                 <img src={props.imageUrl} alt="" />
             </div>
             <div className="content">
-                <h4>{props.title}</h4>
+                <h4 className="clamped-text">{props.title}</h4>
 
                 <div className="details">
                     <div className="left">

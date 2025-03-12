@@ -23,7 +23,7 @@
 }
 
 .blog-section {
-    padding: 16px;
+    padding: 2rem;
     margin-top: 140px;
 }
 
@@ -52,7 +52,6 @@
     display: flex;
     gap: 8px;
     justify-content: start;
-    padding: 20px 200px;
 }
 
 .type p {
@@ -73,6 +72,10 @@
 /* Extra small devices (phones) */
 @media (max-width: 480px) {
     /* Styles for very small screens */
+
+    .blog-section {
+        padding: 2rem 0.5rem;
+    }
 
     .blog-section .headerSection img {
         display: none;

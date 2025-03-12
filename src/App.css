@@ -12,3 +12,23 @@
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
 }
+
+.clamped-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;  
+    line-height: 1.4rem; /* Adjust this based on your design */
+    max-height: calc(1.4rem * 1); /* Match height for 1 line */
+}
+
+/* Show 2 lines on mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .clamped-text {
+        -webkit-line-clamp: 2;
+        max-height: calc(1.4rem * 2); /* Match height for 2 lines */
+    }
+}
+

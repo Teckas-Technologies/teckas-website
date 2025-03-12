@@ -4,6 +4,7 @@ import axios, { AxiosError } from "axios";
 export interface Blog {
     _id?: string;
     title: string;
+    imageUrl: string;
     subTitle: string;
     content: string;
     uploadedAt?: string;

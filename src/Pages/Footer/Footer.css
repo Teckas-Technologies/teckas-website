@@ -125,6 +125,9 @@
     padding: 4%;
   }
 
+  .footer-list li .link {
+    font-size: 14px;
+  }
   .footer-list li {
     font-size: 95%;
   }

@@ -19,7 +19,7 @@
     }
 
     .blogSection {
-        margin-top: 10rem;
+        margin-top: 140px;
         padding: 2rem;
         
         .headerSection {
@@ -64,7 +64,7 @@
         }
 
         .content {
-            margin-top: 10rem;
+            margin-top: 1rem;
 
             .blogGridContainer {
                 .blogGrid {
@@ -90,12 +90,28 @@
         }
 
         .blogSection {
+            padding: 2rem 0.5rem;
+
             .headerSection {
                 flex-direction: column;
 
                 .right {
                     display: none;
                 }
+            }
+
+            .content {
+                margin-top: 1rem;
+    
+                .blogGridContainer {
+                    .blogGrid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                        gap: 2rem;
+                        margin-top: 2rem;
+                    }
+                }
+    
             }
         }
         

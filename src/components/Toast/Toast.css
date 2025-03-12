@@ -1,0 +1,142 @@
+
+
+.toast {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    max-width: 300px;
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1023;
+    animation: slideInRight 0.3s ease-in-out forwards, fadeOut 0.5s ease-in-out forwards 3s; /** 0.3 0.5 3s */
+    transform: translateX(110%);
+}
+
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #b7b7b7;
+    animation: toastProgress 3s ease-in-out forwards; /** 3s */
+}
+
+.toast-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toast-icon {
+    /* padding: 0.35rem 0.5rem;
+    font-size: 1.5rem; */
+    width: 2rem;
+    height: 2rem;
+}
+
+.toast-icon-holder {
+    width: 2rem;
+    height: 2rem;
+}
+
+.toast-message {
+    flex: 1;
+    font-size: 0.9rem;
+    color: #000000;
+    padding: 0.5rem;
+}
+
+.toast.toast-success {
+    background: #ffffff;
+}
+
+.toast.toast-success .toast-progress {
+    background-color: #8FDFFF;
+}
+
+.toast.toast-danger {
+    background: #ffffff;
+}
+
+.toast.toast-danger .toast-progress {
+    background-color: #e74c3c;
+}
+
+.toast.toast-info {
+    background: #bddaed;
+}
+
+.toast.toast-info .toast-progress {
+    background-color: #3498db;
+}
+
+.toast.toast-warning {
+    background: #ead994;
+}
+
+.toast.toast-warning .toast-progress {
+    background-color: #f1c40f;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(110%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes toastProgress {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+/* --- Mobile Fix: Center Toast on Small Screens (≤ 480px) --- */
+@media (max-width: 480px) {
+    .toast {
+        left: 50% !important;
+        right: auto !important;
+        min-width: 250px;
+        transform: translateX(-50%) !important; /* Ensures horizontal centering */
+        animation: slideInCenter 0.3s ease-in-out forwards, fadeOut 3s ease-in-out forwards 3s;
+    }
+
+    /* Adjusted animation for small screens */
+    @keyframes slideInCenter {
+        0% {
+            transform: translateX(-50%) translateY(-100%);
+        }
+        100% {
+            transform: translateX(-50%) translateY(0);
+        }
+    }
+
+    @keyframes slideOutCenter {
+        0% {
+            transform: translateX(-50%) translateY(0);
+        }
+        100% {
+            transform: translateX(-50%) translateY(-100%);
+        }
+    }
+}
