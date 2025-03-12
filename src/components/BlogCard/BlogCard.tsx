@@ -4,32 +4,42 @@ import "./BlogCard.scss";
 
 type BlogCardType = {
     title: string;
-    date: string;
-    duration: string;
-    image: string;
-    category: string;
+    subTitle: string;
+    content: string;
+    imageUrl: string;
+    blogType: string;
+    readTime: number;
+    uploadedAt: string;
 }
 
 
 const BlogCard: React.FC<BlogCardType> = (props) => {
 
+    const convertDateFormat = (dateStr: any) => {
+        const formattedDate = new Date(dateStr).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        });
+        return formattedDate;
+    }
 
     return (
         <div className="BlogCard">
             <div className="image">
-                <img src={props.image} alt="" />
+                <img src={props.imageUrl} alt="" />
             </div>
             <div className="content">
                 <h4>{props.title}</h4>
 
                 <div className="details">
                     <div className="left">
-                        <p>{props.category}</p>
+                        <p>{props.blogType}</p>
                     </div>
                     <div className="right">
-                        <p>{props.date}</p>
+                        <p>{convertDateFormat(props.uploadedAt)}</p>
                         <span className="circle"></span>
-                        <p>{props.duration}</p>
+                        <p>{props.readTime} min</p>
                     </div>
                 </div>
             </div>

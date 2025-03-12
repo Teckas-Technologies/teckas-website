@@ -9,341 +9,50 @@ import BottomPagination from '../../components/BottomPagination/BottomPagination
 import Footer from '../Footer/Footer';
 import BlogCard from '../../components/BlogCard/BlogCard';
 
-import blog1 from "../../assets/blogs/blog1.png"
-import blog2 from "../../assets/blogs/blog2.png"
-import blog3 from "../../assets/blogs/blog3.png"
-import blog4 from "../../assets/blogs/blog4.png"
-
-const blogImages = [blog1, blog2, blog3, blog4];
+import { useBlogs } from '../../Hooks/blogsHook';
 
 type BlogCardType = {
     title: string;
-    date: string;
-    duration: string;
-    image: string;
-    category: string;
+    subTitle: string;
+    content: string;
+    imageUrl: string;
+    blogType: string;
+    readTime: number;
+    uploadedAt: string;
 }
 
-const items: BlogCardType[] = [
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    // 15 ^^
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-    {
-        title: "This article discusses a Smart Insurance Management System developed by Teckas Technologies",
-        date: "20 March 2024",
-        duration: "5 min read",
-        image: "https://placehold.co/600x400/grey/white",
-        category: "Educational"
-    },
-]
-
 const BlogPage: React.FC = () => {
+    const [page, setPage] = useState(1);
+    const [searchText, setSearchText] = useState("");
+    const [loading, setLoading] = useState(false);
 
-    // @ts-ignore
-    const [itemsPerPage, setItemsPerPage] = useState(9);
-    const [startIndex, setStartIndex] = useState(0);
-    const [stopIndex, setStopIndex] = useState(itemsPerPage);
+    const { fetchBlogs, totalPages } = useBlogs();
+    const [blogs, setBlogs] = useState<BlogCardType[]>([]);
 
-    // @ts-ignore
-    const [cards, setCards] = useState(items);
-    const [filteredCards, setFilteredCards] = useState([] as BlogCardType[]);
+    const fetchAllBlogs = async (pageNumber: number = 1) => {
+        setLoading(true);
+        try {
+            const response = await fetchBlogs({ page: pageNumber, search: searchText });
+            console.log("Blogs Fetched:", response.blogs);
+            setBlogs(response.blogs);
+        } catch (error) {
+            console.error("Error fetching blogs:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     useEffect(() => {
-        setFilteredCards(cards);
-    }, []);
+        fetchAllBlogs(page);
+    }, [page, searchText]); // Fetch blogs whenever `page` changes
 
     const goToPage = (index: number) => {
-        index++
+        setPage(index); // Update the page state
+    };
 
-        if (index == 1) {
-            setStartIndex(0)
-            setStopIndex(itemsPerPage)
-        }
-        else {
-            console.log("start index", (index - 1) * itemsPerPage)
-            console.log("stop index", index * itemsPerPage)
-
-            setStartIndex( (index - 1) * itemsPerPage )  
-            setStopIndex(index * itemsPerPage);
-        }
+    const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchText(event.target.value); // Update search text state
+        setPage(1);
     };
 
     return (
@@ -359,7 +68,7 @@ const BlogPage: React.FC = () => {
                         </h1>
                         <div className="searchbarContainer">
 
-                            <input type="text" placeholder="Search for any Blog..." />
+                            <input type="text" placeholder="Search for any Blog..." className='search' value={searchText} onChange={handleSearch} />
 
                         </div>
                         <div className="subtitle">
@@ -378,28 +87,34 @@ const BlogPage: React.FC = () => {
 
                         <div className="blogGrid">
                             {
-                                filteredCards.slice(startIndex, stopIndex).map((card, index) => {
+                                blogs.length > 0 && blogs.map((card, index) => {
                                     return (
                                         <BlogCard
                                             key={index}
                                             {...card}
-                                            image={ blogImages[Math.ceil(Math.random() * 3)]  }
                                         />
                                     )
                                 })
                             }
                         </div>
 
+                        <div className="">
+                            {
+                                blogs.length === 0 && !loading && <p className='no-text'>No blogs found!</p>
+                            }
+                        </div>
+
+                        <div className="">
+                            {
+                                blogs.length === 0 && loading && <p className='no-text'>Fetching blogs!</p>
+                            }
+                        </div>
+
 
                         <BottomPagination 
-                            items={items}
-                            startIndex={startIndex} 
-                            setStartIndex={setStartIndex}
-                            stopIndex={stopIndex}
-                            setStopIndex={setStopIndex}
                             goToPage={goToPage}
-                            itemsPerPage={itemsPerPage}
-                            key={items.length}
+                            currentPage={page}
+                            totalPages={totalPages}
                         />
                     </div>
 
