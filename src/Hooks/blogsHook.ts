@@ -57,9 +57,19 @@ export const useBlogs = () => {
         }
     };
 
+    const fetchBlogById = async (id: string) => {
+        try {
+            const { data } = await axios.get(`https://teckas-website-backend.vercel.app/api/blogs/${id}`);
+            return data
+        } catch (err) {
+            setError((err as AxiosError).message);
+            return { success: false, message: (err as AxiosError).message };
+        }
+    };
+
     const createBlog = async (blog: Blog) => {
         try {
-            const { data } = await axios.post<Blog>("/api/blogs", blog);
+            const { data } = await axios.post<Blog>("https://teckas-website-backend.vercel.app/api/blogs", blog);
             setBlogs((prev) => [...prev, data]);
             return { success: true, data, message: "Blog created successfully!" };
         } catch (err) {
@@ -70,7 +80,7 @@ export const useBlogs = () => {
 
     const updateBlog = async (id: string, updates: Partial<Blog>) => {
         try {
-            const { data } = await axios.put<Blog>(`/api/blogs/${id}`, updates);
+            const { data } = await axios.put<Blog>(`https://teckas-website-backend.vercel.app/api/blogs/${id}`, updates);
             setBlogs((prev) =>
                 prev.map((blog) => (blog._id === id ? { ...blog, ...data } : blog))
             );
@@ -83,7 +93,7 @@ export const useBlogs = () => {
 
     const deleteBlog = async (id: string) => {
         try {
-            await axios.delete(`/api/blogs/${id}`);
+            await axios.delete(`https://teckas-website-backend.vercel.app/api/blogs/${id}`);
             setBlogs((prev) => prev.filter((blog) => blog._id !== id));
             return { success: true, message: "Blog deleted successfully!" };
         } catch (err) {
@@ -92,5 +102,5 @@ export const useBlogs = () => {
         }
     };
 
-    return { blogs, loading, error, createBlog, updateBlog, deleteBlog, fetchBlogs, totalPages, setBlogs };
+    return { blogs, loading, error, createBlog, updateBlog, deleteBlog, fetchBlogs, fetchBlogById, totalPages, setBlogs };
 };

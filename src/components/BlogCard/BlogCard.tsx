@@ -1,8 +1,10 @@
 
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import "./BlogCard.scss";
 
 type BlogCardType = {
+    _id: string;
     title: string;
     subTitle: string;
     content: string;
@@ -14,6 +16,7 @@ type BlogCardType = {
 
 
 const BlogCard: React.FC<BlogCardType> = (props) => {
+    const navigate = useNavigate();
 
     const convertDateFormat = (dateStr: any) => {
         const formattedDate = new Date(dateStr).toLocaleDateString("en-US", {
@@ -25,7 +28,7 @@ const BlogCard: React.FC<BlogCardType> = (props) => {
     }
 
     return (
-        <div className="BlogCard">
+        <div className="BlogCard" onClick={() => {navigate(`/blogs/${props._id}`)}}>
             <div className="image">
                 <img src={props.imageUrl} alt="" />
             </div>

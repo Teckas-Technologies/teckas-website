@@ -1,0 +1,193 @@
+.title-box h3 {
+    font-weight: 600;
+    font-size: 26px;
+    color: #ccc;
+}
+
+.title-box h3 strong {
+    font-weight: 700;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.subtitle h3 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.subtitle h3 strong {
+    font-weight: 600;
+    font-size: 28px;
+    color: #ccc;
+}
+
+.blog-section {
+    padding: 16px;
+    margin-top: 140px;
+}
+
+.blog-content-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.content-text p {
+    text-align: justify;
+    padding: 20px 0;
+}
+
+.type-holder {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    justify-content: start;
+    padding: 20px 200px;
+}
+
+.type p {
+    background-color: #00B7FF;
+    color: white;
+    padding: .25rem .75rem;
+    border-radius: 1rem;
+}
+
+.back p {
+    background-color: #9a9a9a;
+    color: white;
+    padding: .25rem .75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+    /* Styles for very small screens */
+
+    .blog-section .headerSection img {
+        display: none;
+    }
+}
+
+/* Small devices (phones in landscape, small tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    /* Styles for small devices */
+    .content-text {
+        padding: 20px;
+    }
+
+    .type-holder {
+        padding: 20px;
+    }
+
+    .blog-image {
+        width: 90%;
+        height: 300px;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Styles for tablets */
+    .content-text {
+        padding: 20px 50px;
+    }
+
+    .type-holder {
+        padding: 20px 50px;
+    }
+
+    .blog-image {
+        width: 80%;
+        height: 450px;
+    }
+}
+
+/* Large devices (laptops, desktops) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+    /* Styles for laptops */
+    .content-text {
+        padding: 20px 100px;
+    }
+
+    .type-holder {
+        padding: 20px 100px;
+    }
+
+    .blog-image {
+        width: 70%;
+        height: 450px;
+    }
+}
+
+/* Extra large devices (large desktops, big screens) */
+@media (min-width: 1201px) {
+
+    /* Styles for large desktops */
+    .content-text {
+        padding: 20px 200px;
+    }
+
+    .type-holder {
+        padding: 20px 200px;
+    }
+
+    .blog-image {
+        width: 60%;
+        height: 400px;
+    }
+}
+
+.headerSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.left {
+    padding: .5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.searchbarContainer {
+    width: min(400px, 95%);
+    margin-top: 1rem;
+}
+
+input {
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

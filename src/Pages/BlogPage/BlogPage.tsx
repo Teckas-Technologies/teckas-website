@@ -12,6 +12,7 @@ import BlogCard from '../../components/BlogCard/BlogCard';
 import { useBlogs } from '../../Hooks/blogsHook';
 
 type BlogCardType = {
+    _id: string;
     title: string;
     subTitle: string;
     content: string;
